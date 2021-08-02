@@ -1,4 +1,4 @@
-import { RU, KG, EN } from "../actions";
+import { RU,EN } from "../actions";
 import { data } from "../data";
 
 const initialState = {
@@ -11,12 +11,6 @@ export const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         data: data.ru,
-      };
-
-    case KG:
-      return {
-        ...state,
-        data: data.kg,
       };
 
     case EN:

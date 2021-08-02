@@ -1,5 +1,5 @@
 .header {
-    width: 100%;
+    width: 1300px;
     height: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -13,6 +13,7 @@
 nav ul {
     display: flex;
     list-style: none;
-    width: 200px;
+    width: 350px;
     justify-content: space-between;
+    margin-right: 130px;
 }
