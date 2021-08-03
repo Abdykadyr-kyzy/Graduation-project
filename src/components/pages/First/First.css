@@ -1,38 +1,55 @@
 .first {
-    height: 600px;
+    height: 1500px;
     width: 100%;
     margin: 0 auto;
     padding: 0 auto;
     display: flex;
+    flex-direction: column;
     background-color: white;
     justify-content: space-around;
-}
-
+    align-items: center;
+} 
 .text {
-    height: 600px;
-    width: 650px;
+    background-image: url("../../../images/jailoo.jpg");
+    background-position-y: bottom;
+    height: 500px;
+    padding: 50px;
+    width: 100%;
+    color: white;
+    background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     flex-direction: column;
-    margin-top: 80px;
-    margin-left: 20px;
-}
-
-.text p {
-    font-size: 24px;
-}
-
-.img {
-    height: 600px;
-    width: 650px;
-    margin-right: 0px;
-    display: flex;
+    text-align: center;
     align-items: center;
+}
+
+.text h1{
+    width: 700px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    padding-top: 0px;
+}
+
+.title {
+    background-color: turquoise;
+    text-align: start;
+    color: white;
+    width: 900px;
+    height: 60px;
+}
+
+.imgs {
+   margin-top: 100px;
+   width: 900px;
+   height: 350px;
+   border: 1px solid
 }
 
 .foto {
-    height: 450px;
-    width: 700px; 
+    width: 250px;
+    height: 250px;
 }
