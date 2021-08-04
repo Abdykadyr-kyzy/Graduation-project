@@ -4,19 +4,16 @@ import {useSelector } from "react-redux";
 import bir from "../../images/7_n.jpg"
 import { ButtonGroup,Button } from "@material-ui/core";
 import {Link} from "react-router-dom"
-
+import {Header} from "../Header"
 
 export const Home = () => {
 
     const store = useSelector(state => state.data)
 
     return (
-
         <div className="container home">
             <div className="big">
-                <Link to="./first">
                    <h1>Kyrgyzstan</h1>
-                </Link>
             </div>
             <div>
                 <h1>Время путешествовать с Kyrgyz Concept!</h1>
@@ -27,8 +24,8 @@ export const Home = () => {
                 <div>
                     <img src={bir}/>
                     <img src={bir}/>
-                    <img src={bir}></img>
-                    <img src={bir}></img>
+                    <img src={bir}/>
+                    <img src={bir}/>
                 </div>
                 <Button>See all programs</Button>
             </div>

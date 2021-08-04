@@ -9,31 +9,36 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
-// import {Second} from "./components/pages/Second"
-// import {Three} from './components/pages/Three'
-// import {Fore} from './components/pages/Fore'
-// import {Five} from "./components//pages/Five"
-// import {Six} from "./components/pages/Six"
-// import {Seven} from "./components/pages/Seven"
-// import {Eight} from "./components/pages/Eight"
-// import { TableFooter } from '@material-ui/core';
+import {Second} from "./components/pages/Second"
+import {Three} from './components/pages/Three'
+import {Organization} from './components/pages/Organization'
+import {Academi} from "./components//pages/Academi"
+import Other from "./components/pages/Other/index"
+import {Arenda} from "./components/pages/Other/Arenda"
+import {Card} from "./components/pages/Other/Card"
+import {Vip} from "./components/pages/Other/Vip"
 
 
 function App() {
 
   return (
     <div className="App">
-      <Header/>
-      <div>
         <Router>
+          <Header/>
           <Switch>
             <Route path='/first' component={First} />
+            <Route path='/second' component={Second} />
+            <Route path='/three' component={Three} />
+            <Route path='/fore' component={Organization} />
+            <Route path='/five' component={Academi} />
+            <Route path='/other' component={Other} />
+            <Route path='/arenda' component={Arenda} />
+            <Route path='/card' component={Card} />
+            <Route path='/vip' component={Vip} />
             <Route path='/' component={Home} />
           </Switch>
+         <Footer/>
         </Router>
-      </div>
-      <Footer/>
     </div>
   );
 }
