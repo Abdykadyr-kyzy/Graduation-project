@@ -27,7 +27,11 @@ export const Home = () => {
                     <img src={bir}/>
                     <img src={bir}/>
                 </div>
-                <Button>See all programs</Button>
+                {/* <div className="home_card">
+                    <p>2000 сом</p>
+                    <Button>bron naw</Button>
+                </div> */}
+                <Link to="/first"><Button>See all programs</Button></Link>
             </div>
             <div>
                 <h1>Туры по Кыргызстану и Центральной Азии</h1>
@@ -41,7 +45,7 @@ export const Home = () => {
                     <img src={bir}></img>
                     <img src={bir}></img>
                 </div>
-                <Button>See all programs</Button>
+                <Link to="/three"><Button>See all programs</Button></Link>
             </div>
         </div>
     )

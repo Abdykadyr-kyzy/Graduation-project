@@ -1,5 +1,5 @@
 .header {
-    width: 1300px;
+    width: 1450px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -12,11 +12,11 @@
 
 .contain {
     display: flex;
-    height: 150px;
+    height: 120px;
     margin: 0 auto;
     padding: 0 auto;
-    width: 100%;
-    background-color: burlywood;
+    width: 1450px;
+    background-color: cornsilk;
     justify-content: center;
 }
 

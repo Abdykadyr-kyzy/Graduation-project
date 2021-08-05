@@ -1,5 +1,4 @@
-import TwitterIcon from '@material-ui/icons/Twitter';
-import {FacebookOutlined,InstagramOutlined} from "@ant-design/icons"
+import {FacebookOutlined,InstagramOutlined,TwitterOutlined} from "@ant-design/icons"
 import "./Footer.css"
 
 export const Footer = () => {
@@ -12,7 +11,7 @@ export const Footer = () => {
                     </div>
                     <p>one stop travel shop</p>
                     <div>
-                        <TwitterIcon/>
+                        <TwitterOutlined />
                         <FacebookOutlined style={{ height:60,width: 60}} />
                         <InstagramOutlined />
                     </div>
@@ -21,9 +20,9 @@ export const Footer = () => {
                 </div>
                 <div className="block">
                     <ul>
-                        <li>Авиабилеты</li>
-                        <li>ВИП-зал аэропорта</li>
-                        <li>Туры за рубеж из Бишкека.Горящие туры и лучшие предложения для вашего отдыха!</li>
+                        {/* <li>Авиабилеты</li> */}
+                        <li><a href="http://localhost:3000/vip">ВИП-зал аэропорта</a></li>
+                        <li><a href="http://localhost:3000/three">Туры за рубеж из Бишкека.Горящие туры и лучшие предложения для вашего отдыха!</a></li>
                         <li>Учеба за границей</li>
                         <li>TravelSim</li>
                         <li>Визы</li>
@@ -36,10 +35,7 @@ export const Footer = () => {
                         <li>Туры по Кыргызстану и Центральной Азии</li>
                         <li>Транспорт</li>
                         <li>Организация конференций</li>
-                        <li>Кейтеринг от Kyrgyz Concept в Бишкеке, Кыргызстане</li>
-                        <li>Аутстаффинг от Kyrgyz Concept в Бишкеке, Кыргызстане</li>
                         <li>Академия</li>
-                        <li>Сделано в NambaMedia</li>
                     </ul>
                 </div>
                 <div className="block">
@@ -48,9 +44,7 @@ export const Footer = () => {
                         <li>Контакты офисов</li>
                         <li>Новости компании</li>
                         <li>Вакансии</li>
-                        <li>Подписка на новости и спецпредложения</li>
                     </ul>
-                    <b>Увидели ошибку на сайте? Выделите слово, нажмите Shift+Enter. И мы его исправим.</b>
                 </div>
             </div>
         </div>

@@ -110,7 +110,7 @@ export const Header = () => {
                 <div>
                     <Link to="/">
                         <div className="kyrgyz">
-                            KYRGYZ CONCEPT
+                            KYRGYZ TRAVEL
                         </div>
                         <p> One stop travel shop</p>
                     </Link>
@@ -148,7 +148,6 @@ export const Header = () => {
                                     <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
                                         <MenuItem><Link to="/vip">Vip</Link></MenuItem>
                                         <MenuItem><Link to="/card" >Card</Link></MenuItem>
-                                        <MenuItem><Link to="/arenda" >Arenda</Link></MenuItem>
                                     </MenuList>
                                     </ClickAwayListener>
                                 </Paper>

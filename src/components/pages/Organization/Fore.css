@@ -1,0 +1,35 @@
+.organ {
+    display: flex;
+    height: 1400px;
+    width: 1450px;
+    flex-direction: column;
+    align-items: center;
+    background-color:cornsilk;
+}
+
+.organ ul {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+
+.title_organ {
+    height: 300px;
+    width: 1450px;
+    background-image: url("../../../images/ead.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.word_organ {
+    width: 800px;
+    display: flex;
+    text-align: start;
+}

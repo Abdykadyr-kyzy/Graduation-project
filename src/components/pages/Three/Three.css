@@ -1,0 +1,29 @@
+.three {
+    width: 1450px;
+    height: 1900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+.title_three {
+    height: 300px;
+    width: 100%;
+    background-image: url("../../../images/ead.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card_three {
+    height: 250px;
+    width: 800px;
+    text-align: start;
+}

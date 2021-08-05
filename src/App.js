@@ -14,7 +14,6 @@ import {Three} from './components/pages/Three'
 import {Organization} from './components/pages/Organization'
 import {Academi} from "./components//pages/Academi"
 import Other from "./components/pages/Other/index"
-import {Arenda} from "./components/pages/Other/Arenda"
 import {Card} from "./components/pages/Other/Card"
 import {Vip} from "./components/pages/Other/Vip"
 
@@ -32,7 +31,6 @@ function App() {
             <Route path='/fore' component={Organization} />
             <Route path='/five' component={Academi} />
             <Route path='/other' component={Other} />
-            <Route path='/arenda' component={Arenda} />
             <Route path='/card' component={Card} />
             <Route path='/vip' component={Vip} />
             <Route path='/' component={Home} />

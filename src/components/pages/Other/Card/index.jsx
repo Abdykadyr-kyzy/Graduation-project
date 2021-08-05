@@ -1,14 +1,15 @@
 import React from 'react'
 import {Button} from "antd"
+import "./Card.css"
 
 export const Card = () => {
     return (
-        <div>
-            <div>
+        <div style={{width:1450,height:1200,display:'flex',flexDirection:'column',backgroundColor:'cornsilk',alignItems:'center',justifyContent:'space-between'}}>
+            <div className="title_card">
                 <h1>Добро пожаловать в Кыргызстан!</h1>
                 <p>Страна заснеженных гор, зеркальных озер и гостеприимства - лучшее для наших гостей</p>
             </div>
-            <div>
+            <div style={{display:'flex'}}>
                 <div>
                     <img/>
                     <p></p>
@@ -26,7 +27,7 @@ export const Card = () => {
             <div>
                 <h2>Туристические карты</h2>
                 <p>Для удобства путешественников мы выпускаем карты и гиды. Вы можете получить их бесплатно во всех наших офисах, а также в некоторых отелях и кафе города Бишкек. Ниже прикреплены карты, которые Вы можете скачать в электронном виде.</p>
-                <div>
+                <div style={{display:'flex'}}>
                     <div>
                         <img/>
                         <p>Бесплатный туристический путеводитель по Бишкеку</p>
