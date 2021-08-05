@@ -1,19 +1,55 @@
 .header {
-    width: 1300px;
+    width: 1450px;
     height: 100%;
     margin: 0 auto;
-    padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background: none;
     text-align: center;
     align-items: center;
 }
 
+.contain {
+    display: flex;
+    height: 120px;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 1450px;
+    background-color: cornsilk;
+    justify-content: center;
+}
+
+.contain p {
+    width: 100px;
+}
+
+.kyrgyz {
+    width: 100px;
+    height: 50px;
+    background-color: teal;
+    color: white;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1450px;
+    background-color: rgb(114, 111, 114);
+    color: white;
+    height: 40px;
+    border-bottom: 1px solid;
+}
+
 nav ul {
     display: flex;
     list-style: none;
-    width: 350px;
+    width: 550px;
     justify-content: space-between;
     margin-right: 130px;
 }

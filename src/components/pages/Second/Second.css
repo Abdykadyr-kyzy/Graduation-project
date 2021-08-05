@@ -1,29 +1,35 @@
-.first {
-    height: 600px;
+.nav{
+    height: 300px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 auto;
-    display: flex;
-    background-color: white;
+    background-image: url("../../../images/ead.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
     justify-content: space-between;
-}
-
-.text {
-    height: 600px;
-    width: 650px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.img {
-    height: 600px;
-    width: 650px;
-    margin-right: 0px;
-    display: flex;
     align-items: center;
+    color: white;
 }
 
-.foto {
-    height: 450px;
-    width: 700px; 
+.second {
+   width: 1450px;
+   height: 1400px;
+   display: flex;
+   flex-direction: column;
+   background-color:cornsilk;
+}
+
+.avtos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.avto div {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 250px;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
 }

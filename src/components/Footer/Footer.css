@@ -1,0 +1,20 @@
+.footer {
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: thistle;
+}
+
+.block {
+    width: 300px;
+    height: 340px;
+}
+
+.block ul li{
+    list-style: none;
+    text-align: left;
+    margin-bottom:20px;
+}

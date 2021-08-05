@@ -1,17 +1,23 @@
-.three {
-    width: 1450px;
-    height: 1900px;
+.organ {
     display: flex;
+    height: 1400px;
+    width: 1450px;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
     align-items: center;
-    background-color: cornsilk;
+    background-color:cornsilk;
 }
 
-.title_three {
+.organ ul {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+
+.title_organ {
     height: 300px;
-    width: 100%;
+    width: 1450px;
     background-image: url("../../../images/ead.jpg");
     background-size: cover;
     background-position: center;
@@ -22,8 +28,8 @@
     color: white;
 }
 
-.card_three {
-    height: 250px;
+.word_organ {
     width: 800px;
+    display: flex;
     text-align: start;
 }

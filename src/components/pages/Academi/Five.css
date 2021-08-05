@@ -1,0 +1,46 @@
+.title_academi {
+    height: 300px;
+    width: 100%;
+    background-image: url("../../../images/ead.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.academi {
+    display: flex;
+    height: 1000px;
+    width: 1450px;
+    flex-direction: column;
+    align-items: center;
+    background-color:cornsilk;
+}
+
+.car_academi {
+    width: 550px;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.card_academi {
+    width: 250px;
+    height: 160px;
+    border-right: 2px solid blue;
+    color:tomato;
+    text-align: end;
+    padding-right: 20px;
+}
+.card_academi h2 {
+        color:tomato;
+    }
+
+
+.cards_academi {
+    display: flex;
+    width: 600px;
+}
+
