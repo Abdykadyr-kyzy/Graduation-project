@@ -1,9 +1,9 @@
 .nav{
-    height: 300px;
-    width: 100%;
-    background-image: url("../../../images/ead.jpg");
+    height: 500px;
+    width: 1450px;
+    background-image: url("https://sputnik.kg/images/102366/06/1023660670.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     text-align: center;
     justify-content: space-between;

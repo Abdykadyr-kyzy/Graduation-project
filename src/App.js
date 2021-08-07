@@ -3,6 +3,7 @@ import {Header} from './components/Header';
 import {Home} from './components/Home'
 import {First} from "./components/pages/First"
 import {Footer} from "./components/Footer"
+import {About} from './components/About'
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +17,7 @@ import {Academi} from "./components//pages/Academi"
 import Other from "./components/pages/Other/index"
 import {Card} from "./components/pages/Other/Card"
 import {Vip} from "./components/pages/Other/Vip"
+
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
             <Route path='/other' component={Other} />
             <Route path='/card' component={Card} />
             <Route path='/vip' component={Vip} />
+            <Route path='/about' component={About} />
             <Route path='/' component={Home} />
           </Switch>
          <Footer/>

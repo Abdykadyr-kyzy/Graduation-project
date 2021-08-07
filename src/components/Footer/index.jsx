@@ -5,9 +5,9 @@ export const Footer = () => {
     return (
         <div className="container">
             <div className="footer">
-                <div className="block">
+                <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}  className="block">
                     <div className="kyrgyz">
-                        KYRGYZ CONCEPT
+                        KYRGYZ <br/>TRAVEL
                     </div>
                     <p>one stop travel shop</p>
                     <div>

@@ -3,11 +3,9 @@ import Button from '@material-ui/core/Button';
 import './Header.css';
 import LanguageIcon from '@material-ui/icons/Language';
 import SubwayIcon from '@material-ui/icons/Subway';
-import Search from "@material-ui/icons/Search"
 import { switch_language } from "../../store/actions";
 import { useDispatch,useSelector } from "react-redux";
 import {RU,EN} from "../../store/actions"
-import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
 import SchoolIcon from '@material-ui/icons/School';
 import {Link} from "react-router-dom";
 
@@ -15,8 +13,6 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const Header = () => {
@@ -73,12 +69,10 @@ export const Header = () => {
         <div className="container header">
             <nav>
                 <ul>
-                    <li>{store.home}</li>
-                    <li>{store.course}</li>
-                    <li>{store.about}</li>
-                    <li>{store.vacansiec}</li>
-                    <li>{store.review}</li>
-                    <li>{store.contacts}</li>
+                    <li><Link to="/" >{store.review}</Link></li> 
+                    <li><Link to="/about" >{store.about}</Link></li>
+                    <li>{store.home}:Abdykadyr kyzy Kanzada,Nuraiym Erkinova</li>
+                    <li>{store.contacts}:0772 200 209 - 0773 107 453</li>
                 </ul>
                 <div>
                     <span>
@@ -92,7 +86,7 @@ export const Header = () => {
                 <Link to='/first'>
                 <div>
                     <SubwayIcon/>
-                    <p>Туры за рубеж</p>
+                    <p>Туры po Bishkek</p>
                 </div>
                 </Link>
                 <Link to='/second'>
@@ -104,13 +98,13 @@ export const Header = () => {
                 <Link to='/three'>
                     <div>
                         <SubwayIcon/>
-                        <p>Туры по центральной Азии</p>
+                        <p>Туры по regionam</p>
                     </div>
                 </Link>
                 <div>
                     <Link to="/">
                         <div className="kyrgyz">
-                            KYRGYZ TRAVEL
+                            KYRGYZ<br/> TRAVEL
                         </div>
                         <p> One stop travel shop</p>
                     </Link>
@@ -124,7 +118,7 @@ export const Header = () => {
                 <div>
                     <Link to="/five">
                         <SchoolIcon/>
-                        <p>Академия</p>
+                        <p>Our school</p>
                     </Link>
                 </div>
                 <div>
@@ -141,14 +135,14 @@ export const Header = () => {
                             {({ TransitionProps, placement }) => (
                                 <Grow
                                 {...TransitionProps}
-                                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                                style={{transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
                                 >
                                 <Paper>
                                     <ClickAwayListener onClickAway={handleClose}>
-                                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                        <MenuItem><Link to="/vip">Vip</Link></MenuItem>
-                                        <MenuItem><Link to="/card" >Card</Link></MenuItem>
-                                    </MenuList>
+                                    <div style={{width:100,height:55,marginBottom:-20}} autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                                        <p><Link to="/vip">Vip</Link></p>
+                                        <p><Link to="/card" >Card</Link></p>
+                                    </div>
                                     </ClickAwayListener>
                                 </Paper>
                                 </Grow>
