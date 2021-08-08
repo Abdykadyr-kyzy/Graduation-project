@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {rootReducer} from "./store/reducers";
+import rootReducer from "./store/reducers/combine";
 import {createStore} from "redux";
 import { Provider } from 'react-redux';
 import 'antd/dist/antd.css';

@@ -46,7 +46,7 @@ export const Three = () => {
                 <div className="fotos">
                     <div>
                         <h1>Kashka suu</h1>
-                        <img src="https://centralasiagb.com/wp-content/uploads/2019/09/Kashka-Suu-ski-resort-24-sbkg0002.jpg" />
+                        <img src="https://centralasiagb.com/wp-content/uploads/2019/09/Kashka-Suu-ski-resort-24-sbkg0002.jpg" alt="" />
                         <div style={{display:'flex',justifyContent:'space-between'}}>
                             <Button type="primary">Buy</Button>
                             <h2>100$ 6 day</h2>
@@ -62,7 +62,7 @@ export const Three = () => {
                     </div>
                     <div>
                         <h1>Apshyr Ata</h1>
-                        <img src="https://www.triptokyrgyzstan.com/sites/default/files/images/2019-03/12373264_1686498211565300_5837650685050943349_n.jpg" />
+                        <img src="https://www.triptokyrgyzstan.com/sites/default/files/images/2019-03/12373264_1686498211565300_5837650685050943349_n.jpg" alt="" />
                         <div style={{display:'flex',justifyContent:'space-between'}}>
                             <Button type="primary">Buy</Button>
                             <h2>100$ 6 day</h2>
@@ -78,7 +78,7 @@ export const Three = () => {
                     </div>
                     <div>
                         <h1>Cary chelek</h1>
-                        <img src="https://i.pinimg.com/originals/8f/17/cf/8f17cfb221c44389292911f5b02731e9.jpg"/> 
+                        <img src="https://i.pinimg.com/originals/8f/17/cf/8f17cfb221c44389292911f5b02731e9.jpg" alt="" /> 
                         <div style={{display:'flex',justifyContent:'space-between'}}>
                             <Button type="primary">Buy</Button>
                             <h2>100$ 6 day</h2>
@@ -94,7 +94,7 @@ export const Three = () => {
                     </div>
                     <div>
                         <h1>Son kol</h1>
-                        <img src="https://www.baibol.kg/img/attraction_gallery/152413595171158.jpg"/> 
+                        <img src="https://www.baibol.kg/img/attraction_gallery/152413595171158.jpg" alt=""/> 
                         <div style={{display:'flex',justifyContent:'space-between'}}>
                             <Button type="primary">Buy</Button>
                             <h2>100$ 6 day</h2>
@@ -115,16 +115,16 @@ export const Three = () => {
                             <h1>Все туры</h1>
                         </div>
                         <div className="fotos">
-                            <img src="https://triptokyrgyzstan.com/sites/default/files/media/image/c_sergey_kalachov_9.jpg" />
-                            <img src="http://novosti.kg/wp-content/uploads/2020/04/ajgul.jpg"/>
-                            <img src="https://concept.kg/media/cache/f1/19/f119656253f77337c00c74a5e10c950d.jpg" /> 
-                            <img src="https://www.open.kg/uploads/posts/2014-07/1405169362_elechek3.jpg"/>
+                            <img src="https://triptokyrgyzstan.com/sites/default/files/media/image/c_sergey_kalachov_9.jpg" alt="" />
+                            <img src="http://novosti.kg/wp-content/uploads/2020/04/ajgul.jpg" alt="" />
+                            <img src="https://concept.kg/media/cache/f1/19/f119656253f77337c00c74a5e10c950d.jpg" alt="" /> 
+                            <img src="https://www.open.kg/uploads/posts/2014-07/1405169362_elechek3.jpg" alt="" />
                         </div>
                         <div className="fotos" >
-                            <img src="https://triptokyrgyzstan.com/sites/default/files/media/image/gallery_126_3945_166624.jpg"/>
-                            <img src="https://cacdn.araratour.com/file_manager/images/Kyrgyzstan/Sights/ala-kul-lakeo.jpg"/>
-                            <img src="https://asiamountains.net/assets/cache_image/assets/lib/resized/370/1600x1063_0x0_d0b.jpg"/> 
-                            <img src="https://upload.wikimedia.org/wikipedia/ky/b/b5/%D0%9C%D0%B0%D0%BD%D0%B0%D1%81_%D1%87%D0%BE%D0%BA%D1%83%D1%81%D1%83.jpg"/>
+                            <img src="https://triptokyrgyzstan.com/sites/default/files/media/image/gallery_126_3945_166624.jpg" alt="" />
+                            <img src="https://cacdn.araratour.com/file_manager/images/Kyrgyzstan/Sights/ala-kul-lakeo.jpg" alt="" />
+                            <img src="https://asiamountains.net/assets/cache_image/assets/lib/resized/370/1600x1063_0x0_d0b.jpg" alt="" /> 
+                            <img src="https://upload.wikimedia.org/wikipedia/ky/b/b5/%D0%9C%D0%B0%D0%BD%D0%B0%D1%81_%D1%87%D0%BE%D0%BA%D1%83%D1%81%D1%83.jpg" alt="" />
                         </div>
                     </div>
                     <div className="card_three" >

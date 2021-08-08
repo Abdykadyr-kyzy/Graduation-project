@@ -1,11 +1,8 @@
 import React from "react";
 import './Second.css';
 import SubwayIcon from '@material-ui/icons/Subway';
-import { useSelector } from "react-redux";
 
 export const Second = () => {
-
-    const store = useSelector(state => state.data)
 
    return (
         <div className="container second">

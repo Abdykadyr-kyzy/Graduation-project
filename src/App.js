@@ -7,8 +7,7 @@ import {About} from './components/About'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import {Second} from "./components/pages/Second"
 import {Three} from './components/pages/Three'
@@ -17,8 +16,14 @@ import {Academi} from "./components//pages/Academi"
 import Other from "./components/pages/Other/index"
 import {Card} from "./components/pages/Other/Card"
 import {Vip} from "./components/pages/Other/Vip"
+ 
+import {Login} from "./components/foruser/Login";
+import {SignUp} from "./components/foruser/SignUp";
+import {UserProfile}  from "./components/foruser/UserProfile/index";
 
-
+import {DeleteAccount} from "./components/foruser/UserProfile/DeleteAccount"
+import {SettingBody} from "./components/foruser/UserProfile/SettingBody"
+import {ChangePassword} from "./components/foruser/UserProfile/ChangePassword"
 
 function App() {
 
@@ -36,7 +41,13 @@ function App() {
             <Route path='/card' component={Card} />
             <Route path='/vip' component={Vip} />
             <Route path='/about' component={About} />
-            <Route path='/' component={Home} />
+            <Route path='/login' component={Login} />
+            <Route path='/sign' component={SignUp} />
+            <Route path='/user' component={UserProfile} />
+            <Route path='/profile/edit_password' component={DeleteAccount}/>
+            <Route path='/profile/changePassword' component={ChangePassword}/>
+            <Route path='/profile' component={SettingBody} />
+            <Route path='/' exact component={Home} />
           </Switch>
          <Footer/>
         </Router>

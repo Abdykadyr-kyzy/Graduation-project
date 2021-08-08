@@ -1,18 +1,17 @@
-import { RU,EN } from "../actions";
-import { data } from "../data";
+import  {RU,EN}  from "../actions"
+import {data} from "../data"
 
 const initialState = {
   data: data.ru,
 };
 
-export const rootReducer = (state = initialState, action) => {
+export const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case RU:
       return {
         ...state,
         data: data.ru,
       };
-
     case EN:
       return {
         ...state,
