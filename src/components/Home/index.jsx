@@ -21,6 +21,29 @@ export const Home = () => {
     };
   
 
+    const [open,setOpen] =useState()
+    const [inEmail, setInEmail] = useState("");
+    const [inPassword, setInPassword] = useState("");
+
+
+    // const mostrarAlerta = () =>{
+	// 	swal({
+    //         title: "succes!",
+    //         text: "We will connect!",
+    //         icon: "success",
+    //         button: handleClose(),
+    //       });
+          
+	// }
+
+    const handleClickOpen=() =>{
+        setOpen(true)
+            
+    }
+    const handleClose=() =>{
+        setOpen(false)
+            
+    }
     return (
         <div className="container home">
             <div className="big">

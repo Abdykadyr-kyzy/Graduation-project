@@ -18,7 +18,7 @@ export const SettingBody = () => {
 		<div className='settings-block '>
 			<div>
 				<h1>Settings</h1>
-				<div className='setting-header'>
+				{/* <div className='setting-header'>
 					<div className='setting-img'>
 						<img style={{width:40,height:40}} src={iconImg} alt='' />
 					</div>
@@ -30,7 +30,7 @@ export const SettingBody = () => {
 				<p className='browse'>
 					{' '}
 					<p>Browse</p>
-				</p>
+				</p> */}
 			</div>
 			{/* inputs */}
 			{/* inp stoke-1 */}

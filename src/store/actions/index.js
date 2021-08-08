@@ -6,6 +6,17 @@ export const DELETE_USER = 'DELETE_USER'
 export const DELETE_ACCOUNT = 'DELETE_ACCOUNT'
 export const EDIT_USER = 'EDIT_USER'
 export const EDIT_PASSWORD = "EDIT_PASSWORD"
+export  const ADD_ORDER = 'ADD_ORDER'
+export const DELETE_ORDER = 'DELETE_ORDER'
+
+export const add_order = (item) => ({
+        type: ADD_ORDER,
+        payload: item
+})
+export const delete_order = (item) => ({
+        type: DELETE_ORDER,
+        payload: item
+})
 
 export const switch_language = (type) => ({
   type,
