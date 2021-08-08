@@ -29,10 +29,7 @@
     height: 50px;
     background-color: teal;
     color: white;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-top-right-radius: 40px;
+    border-radius: 50%;
 }
 
 nav {
@@ -49,7 +46,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    width: 550px;
+    width: 800px;
     justify-content: space-between;
     margin-right: 130px;
 }

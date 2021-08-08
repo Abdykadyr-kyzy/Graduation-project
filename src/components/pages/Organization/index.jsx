@@ -1,10 +1,6 @@
 import React from "react";
-import Button from '@material-ui/core/Button';
 import './Fore.css';
-import fore from "../../../images/six.jpg"
-import SubwayIcon from '@material-ui/icons/Subway';
-import Search from "@material-ui/icons/Search"
-import SchoolIcon from "@material-ui/icons/School"
+
 
 export const Organization = () => {
 

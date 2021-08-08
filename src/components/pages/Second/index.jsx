@@ -1,13 +1,8 @@
 import React from "react";
 import './Second.css';
 import SubwayIcon from '@material-ui/icons/Subway';
-import SchoolIcon from '@material-ui/icons/School';
-import Search from "@material-ui/icons/Search"
-import { useSelector } from "react-redux";
 
 export const Second = () => {
-
-    const store = useSelector(state => state.data)
 
    return (
         <div className="container second">
