@@ -67,7 +67,7 @@ export const First = () => {
                             <Button type="primary">Buy</Button>
                             <h2>100$ 6 day</h2>
                             <Button type="primary" onClick={showModal}>
-                                Open Modal
+                                Read more...
                             </Button>
                             <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                                 <p>Some contents...</p>

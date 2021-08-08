@@ -27,10 +27,10 @@ export const Login = () => {
 				<div className='sign__block1'>
 					<h1 className='sign__title'>Sign in</h1>
 					<p>Sign up with</p>
-					<div className='sign__img__btns'>
+					{/* <div className='sign__img__btns'>
 						<img style={{width:100,height:40}} src={imgGoogle} alt='' />
 						<img style={{width:100,height:40}} src={imgFacebook} alt='' />
-					</div>
+					</div> */}
 					<p style={{ paddingLeft: '114px' }}>Or</p>
 					<br />
 					<div className='textfield'>

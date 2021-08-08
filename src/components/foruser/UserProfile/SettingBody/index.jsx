@@ -90,7 +90,6 @@ export const SettingBody = () => {
 						</Link>
 					</div>
 				</div>
-				{/* inp last-stoke-4 */}
 				<div className='inpLastStroke'>
 					<div>
 						<Link to='/profile/edit_password'>
@@ -98,24 +97,26 @@ export const SettingBody = () => {
 						</Link>
 					</div>
 					<div>
-						<CustomButton
-							primary
-							className='CustomButton'
-							onClick={() => {
-								dispatch(
-									edit_user({
-										lastName,
-										firstName,
-										userEmail: currentUser.userEmail,
-										userPassword: currentUser.userPassword,
-										id: currentUser.id,
-										photo: '',
-									}),
-								)
-							}}
-						>
-							Save
-						</CustomButton>
+						<Link to="/" >
+							<CustomButton
+								primary
+								className='CustomButton'
+								onClick={() => {
+									dispatch(
+										edit_user({
+											lastName,
+											firstName,
+											userEmail: currentUser.userEmail,
+											userPassword: currentUser.userPassword,
+											id: currentUser.id,
+											photo: '',
+										}),
+									)
+								}}
+							>
+								Save
+							</CustomButton>
+						</Link>
 					</div>
 				</div>
 			</div>

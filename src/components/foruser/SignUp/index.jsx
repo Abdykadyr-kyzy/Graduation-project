@@ -103,10 +103,10 @@ console.log(state)
 						Create account
 					</CustomButton>
 					<p>Sign up with</p>
-					<div className='sign__img__btns'>
+					{/* <div className='sign__img__btns'>
 						<img style={{width:100,height:40}} src={imgGoogle} alt='' />
 						<img style={{width:100,height:40}} src={imgFacebook} alt='' />
-					</div>
+					</div> */}
 					<b className='sign__end__text1'>
 						Already have an account?{' '}
 						<Link to="/login">

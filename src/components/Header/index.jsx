@@ -8,6 +8,7 @@ import { useHistory } from 'react-router'
 import {RU,EN,is_delete,switch_language} from "../../store/actions"
 import SchoolIcon from '@material-ui/icons/School';
 import {Link} from "react-router-dom";
+import { Rate } from 'antd';
 
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
@@ -70,6 +71,8 @@ export const Header = () => {
         <div className="container header">
             <nav>
                 <ul>
+                    <Link to="./about" ><li>about</li></Link>
+                    <Rate />
                     {/* <li><Link to="/" >{store.review}</Link></li> 
                     <li><Link to="/about" >{store.about}</Link></li>
                     <li>{store.home}:Abdykadyr kyzy Kanzada,Nuraiym Erkinova</li>
