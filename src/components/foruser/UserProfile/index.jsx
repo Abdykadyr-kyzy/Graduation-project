@@ -3,7 +3,7 @@ import doc from './img/file_copy_24px.png'
 import sub from './img/Subscriptions.png'
 import './UserProfile.less'
 import set from "./img/setting.png"
-import { SettingBody } from './SettingBody'
+// import { SettingBody } from './SettingBody'
 import {useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import { delete_order } from "../../../store/actions"
@@ -44,35 +44,29 @@ export const UserProfile = () => {
 								: ''}
 						</p>
 					</div>
-					<div style={styles.basketContainer}>
+					<div>
 						<h1>your tours</h1>
 						<MenuList>
 							{
 								orders.length ? orders.map((el, id) => {
 									return <div key={id}>
 										<h2>{el.title}: {el.price}som</h2>
+										<img src={el.img} /><br></br>
 										<Button onClick={() => dispatch(delete_order(el))}>
 											otmenit
 										</Button>
 									</div>
 								})
 									: <div>
-										{/* <Skeleton />
-										<Skeleton animation={false} />
-										<Skeleton animation="wave" /> */}
+										you not which yet
 									</div>
 							}
 						</MenuList>
 					</div>
 				</div>
-				<div className='shadow'><SettingBody/></div>
 			</div>
 		</div>
 	)
 }
 
-const styles = {
-    basketContainer: {
-        
-    }
-}
+

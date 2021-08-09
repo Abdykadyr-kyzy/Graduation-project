@@ -4,6 +4,8 @@ import {Carousel, Modal} from "antd"
 import { useState } from 'react';
 import { useEffect } from 'react'
 import { data } from "../../../store/order"
+import {region} from "../../../store/order"
+import {regions} from "../../../store/order"
 import { useSelector, useDispatch } from 'react-redux'
 import { add_order, delete_order } from "../../../store/actions"
 import MenuItem from '@material-ui/core/MenuItem';
@@ -88,155 +90,62 @@ export const First = () => {
                                         <Button onClick={() => {dispatch(add_order(el))
                                         handleClick()}} type="primary" >buy</Button>
                                     </div>
-
                                 </Tooltip>
                             })
                         }
                     </MenuList>
                 </div>
-                <Snackbar open={open} autoHideDuration={6000}>
-                    <Alert severity="success">
-                        Заказ успешно добавлен!
-                </Alert>
-                </Snackbar>
              </div>
-             <div className="cards_all">
-                 <div className="word">
+            <div  className="cards_all" >
+                <div className="word">
                     <h1>Все туры</h1>
-                </div>
-                <div className="fotos">
-                    <div>
-                        <h1>Osh bazar</h1>
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/14/4b/87/f2/img-20180824-175736-814.jpg" alt="" />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Arashan</h1>
-                        <img src="https://planetaduha.com/wp-content/uploads/2014/06/14-altyn-arashan-013.jpg" alt="" />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Ata beyit</h1>
-                        <img src="http://1.bp.blogspot.com/-X1vprd-f-eA/VSJoIefNccI/AAAAAAAAA4M/xgE6vu8Jcz8/s1600/DSC_4568.JPG" alt="" /> 
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Ploshad</h1>
-                        <img src="https://www.baibol.kg/img/attraction_gallery/152413810420654.jpg" alt="" /> 
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
+                  </div>
+                  <div style={styles.menuContainer} >
+                      {
+                        region.map((el, id) => {
+                            return <Tooltip>
+                                <div
+                                    style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
+                                    key={id} >
+                                    <div>
+                                        <h1>{el.title}:  {el.price} </h1> 
+                                    </div>
+                                    <div style={{padding: 10}} >
+                                        <img src={el.img} />
+                                    </div>
+                                      <Button onClick={() => {dispatch(add_order(el))
+                                        handleClick()}} type="primary" >buy</Button>
+                                </div>
+                            </Tooltip>
+                        })
+                      }
+                   </div>
+                    <div style={styles.menuContainer} >
+                        {
+                            regions.map((el, id) => {
+                                return <Tooltip>
+                                    <div
+                                        style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
+                                        key={id} >
+                                        <div>
+                                            <h1>{el.title}:  {el.price} </h1> 
+                                        </div>
+                                        <div style={{padding: 10}} >
+                                           <img src={el.img} />
+                                        </div>
+                                        <Button onClick={() => {dispatch(add_order(el))
+                                        handleClick()}} type="primary" >buy</Button>
+                                    </div>
+                                </Tooltip>
+                            })
+                        }
                     </div>
                 </div>
-                <div className="fotos">
-                    <div>
-                        <h1>Filormaniya</h1>
-                        <img src="https://koom.press/wp-content/uploads/2021/04/707571.323461abc113998bb8085e59b4ff8ab3.jpg" alt="" />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Arka</h1>
-                        <img src="https://edem-v-gosti.ru/upload/iblock/ad7/115390_603x354.jpg" alt="" />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Meriya</h1>
-                        <img src="https://sputnik.kg/images/104881/28/1048812800.jpg" alt="" /> 
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                    <div>
-                        <h1>Dordoi bazar</h1>
-                        <img src="https://img.itinari.com/pages/images/original/0bf023fd-56c7-4eb7-b5d5-bdf489351b1f-istock-820873180.jpg?ch=DPR&dpr=1&w=1600&s=b5f717523c556bf502422d854a030883" alt="" />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                            <Button type="primary">Buy</Button>
-                            <h2>100$ 6 day</h2>
-                            <Button type="primary" onClick={showModal}>
-                                Open Modal
-                            </Button>
-                            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                                <p>Some contents...</p>
-                            </Modal>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Snackbar open={open} autoHideDuration={6000}>
+                <Alert severity="success">
+                    Заказ успешно добавлен!
+                </Alert>
+            </Snackbar>
             <div className="card">
                 <h1>Горящие туры в любую страну из Бишкека</h1>
                 <p>Туры за границу из Бишкека придутся по душе
@@ -255,6 +164,7 @@ export const First = () => {
 
 const styles = {
     menuContainer: {
+        width: 850,
         display:'flex',
         justifyContent:'space-around'
     },
