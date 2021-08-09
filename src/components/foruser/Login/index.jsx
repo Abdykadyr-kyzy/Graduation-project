@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './login.less'
 import { useDispatch, useSelector } from 'react-redux'
-import { CustomInput, Label } from "../../TextField"
-import { CustomButton } from "../../CustomButton"
+import { Label } from "../../TextField"
+import { Button,Input} from "antd"
 import { Link, useHistory } from 'react-router-dom'
 import { login_user } from"../../../store/actions" 
 
@@ -25,17 +25,11 @@ export const Login = () => {
 		<div className='sign__main'>
 			<div className='sign__block container'>
 				<div className='sign__block1'>
-					<h1 className='sign__title'>Sign in</h1>
-					<p>Sign up with</p>
-					{/* <div className='sign__img__btns'>
-						<img style={{width:100,height:40}} src={imgGoogle} alt='' />
-						<img style={{width:100,height:40}} src={imgFacebook} alt='' />
-					</div> */}
-					<p style={{ paddingLeft: '114px' }}>Or</p>
+					<h1 className='sign__title'>Login</h1>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Email'>Email</Label>
-						<CustomInput
+						<Label htmlFor='Email'>Email</Label><br/>
+						<Input style={{width:300}}
 							type='email'
 							placeholder='Enter the Email'
 							value={inEmail}
@@ -44,15 +38,15 @@ export const Login = () => {
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Password'>Password </Label>
-						<CustomInput
+						<Label htmlFor='Password'>Password </Label><br/>
+						<Input style={{width:300}}
 							type='password'
 							placeholder='Password'
 							value={inPassword}
 							onChange={(e) => setInPassword(e.target.value)}
 						/>
 					</div>
-					<CustomButton
+					<Button
 						className='sign__btn'
 						primary
 						onClick={() => {
@@ -60,14 +54,14 @@ export const Login = () => {
 						}}
 					>
 						Sign in
-					</CustomButton>
+					</Button> <br/>
 
 					<b className='sign__end__text'>
 						Don't have an account?
-						<Link to="/sign">
-							<p>Sign up</p>
-						</Link>
 					</b>
+					<Link to="/sign">
+						<p>Sign up</p>
+					</Link>
 				</div>
 				<div className='sign__block2'></div>
 			</div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import { CustomInput, Label } from "../../TextField"
+import { Label } from "../../TextField"
 import './signUp.less'
-import { CustomButton } from "../../CustomButton"
+import { Button,Input } from "antd"
 import imgGoogle from './images/google.png'
 import imgFacebook from './images/facebook.png'
 import { useDispatch, useSelector } from 'react-redux'
@@ -59,8 +59,8 @@ console.log(state)
 					<h1 className='sign__title'>Sign up</h1>
 
 					<div className='textfield'>
-						<Label htmlFor='Your Name'>Your Name</Label>
-						<CustomInput
+						<Label htmlFor='Your Name'>Your Name</Label><br/>
+						<Input style={{width:300}}
 							type='text'
 							placeholder='Your Name'
 							value={userName}
@@ -69,8 +69,8 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Email'>Email</Label>
-						<CustomInput
+						<Label htmlFor='Email'>Email</Label><br/>
+						<Input style={{width:300}}
 							type='email'
 							placeholder='Enter the Email'
 							value={userEmail}
@@ -79,21 +79,16 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Password'>Password</Label>
-						<CustomInput
-							style={{ marginBottom: 24 }}
+						<Label htmlFor='Password'>Password</Label><br/>
+						<Input 
+							style={{ marginBottom: 24 ,width:300}}
 							type='password'
 							placeholder='At least 8 characters long'
 							value={userPassword}
 							onChange={(e) => setUserPassword(e.target.value)}
 						/>
 					</div>
-					<b className='sign__link__text1'>
-						By proceeding, I agree with the
-						<p>Terms of Service</p> <br /> and
-						<p>Privacy & Policy</p>
-					</b>
-					<CustomButton
+					<Button
 						className='sign__btn1'
 						primary
 						onClick={() => {
@@ -101,12 +96,7 @@ console.log(state)
 						}}
 					>
 						Create account
-					</CustomButton>
-					<p>Sign up with</p>
-					{/* <div className='sign__img__btns'>
-						<img style={{width:100,height:40}} src={imgGoogle} alt='' />
-						<img style={{width:100,height:40}} src={imgFacebook} alt='' />
-					</div> */}
+					</Button> <br/>
 					<b className='sign__end__text1'>
 						Already have an account?{' '}
 						<Link to="/login">

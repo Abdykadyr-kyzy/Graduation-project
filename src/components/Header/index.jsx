@@ -49,6 +49,13 @@ export const Header = () => {
         setOpen(false);
     };
 
+    // function scrool () {
+    //     var top = $(document).scrollTop();
+    //     if(top < 650)  $(".header_content").className({top: '0px', position: 'relative'});
+    //     else $(".header_content").className({top:'0px',position: 'fixed'})
+    // }
+
+
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
         event.preventDefault();
@@ -68,7 +75,7 @@ export const Header = () => {
 
 
    return (
-        <div className="container header">
+        <div className="content_header">
             <nav>
                 <ul>
                     <Link to="./about" ><li>about</li></Link>
@@ -94,7 +101,7 @@ export const Header = () => {
                             <Link to="/user">
                                 <img
                                     className='profile__img'
-                                    style={{ width: '30px', margin: '0 20px' }}
+                                    style={{ width: 30,height:30 ,margin: '0 20px' }}
                                     src='https://www.pngkey.com/png/full/178-1787134_png-file-svg-github-icon-png.png'
                                     alt=''
                                 />
