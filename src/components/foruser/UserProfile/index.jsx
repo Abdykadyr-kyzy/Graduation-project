@@ -11,6 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Skeleton from '@material-ui/lab/Skeleton';
 import DeleteIcon from '@material-ui/icons/Delete';
+
 import Button from "@material-ui/core/Button"
 
 export const UserProfile = () => {
@@ -51,7 +52,11 @@ export const UserProfile = () => {
 								orders.length ? orders.map((el, id) => {
 									return <div key={id}>
 										<h2>{el.title}: {el.price}som</h2>
-										<img src={el.img} /><br></br>
+										<b>{el.count}</b>
+										<h1> count: {el.price} * {el.count} = {el.sum}</h1>
+										<div>
+										   <img src={el.img} /><br></br>
+										</div>
 										<Button onClick={() => dispatch(delete_order(el))}>
 											otmenit
 										</Button>

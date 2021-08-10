@@ -13,8 +13,9 @@ import MenuList from '@material-ui/core/MenuList';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from "@material-ui/core/Button"
 import {Link} from "react-router-dom"
-// alert
-import Snackbar from '@material-ui/core/Snackbar';
+
+//alert
+import swal from 'sweetalert';
 import MuiAlert from "@material-ui/lab/Alert"
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -27,29 +28,20 @@ export const First = () => {
     useEffect(() => {
         localStorage.setItem('orders', JSON.stringify(orders))
     },[orders])
-    // alert
-    const [open, setOpen] = React.useState(false);
-    const handleClick = () => {
-        setOpen(true);
-        setTimeout(() => {
-            setOpen(!true);   
-        }, 1000)
-    };
-
-    const [isModalVisible, setIsModalVisible] = useState(false);
-
-    const showModal = () => {
-      setIsModalVisible(true);
-    };
   
-    const handleOk = () => {
-      setIsModalVisible(false);
-    };
-  
-    const handleCancel = () => {
-      setIsModalVisible(false);
-    };
-  
+    
+   
+   
+    const mostrarAlerta = () =>{
+		swal({
+            title: "succes!",
+            text: "We will connect!",
+            icon: "success",
+            button: "ok",
+          });
+          
+	}
+   
 
     return(  
         <div style={{height: 2000,backgroundColor:'cornsilk',width: 1450,display: 'flex',flexDirection: 'column',alignItems: 'center',justifyContent: 'space-between' }}>
@@ -81,14 +73,14 @@ export const First = () => {
                                     <div
                                         style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
                                         key={id} >
-                                        <div>
+                                        <div>   
                                             <h1>{el.title}:  {el.price} </h1> 
                                         </div>
                                         <div style={{padding: 10}} >
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
                                     </div>
                                 </Tooltip>
                             })
@@ -114,7 +106,7 @@ export const First = () => {
                                         <img src={el.img} />
                                     </div>
                                       <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
                                 </div>
                             </Tooltip>
                         })
@@ -134,18 +126,13 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                       mostrarAlerta()}} type="primary" >buy</Button>
                                     </div>
                                 </Tooltip>
                             })
                         }
                     </div>
                 </div>
-            <Snackbar open={open} autoHideDuration={6000}>
-                <Alert severity="success">
-                    Заказ успешно добавлен!
-                </Alert>
-            </Snackbar>
             <div className="card">
                 <h1>Горящие туры в любую страну из Бишкека</h1>
                 <p>Туры за границу из Бишкека придутся по душе

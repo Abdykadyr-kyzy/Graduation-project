@@ -1,49 +1,43 @@
-import {FacebookOutlined,InstagramOutlined,TwitterOutlined} from "@ant-design/icons"
+import {InstagramOutlined,GoogleOutlined } from "@ant-design/icons"
 import "./Footer.css"
+import { Rate } from 'antd';
+
 
 export const Footer = () => {
     return (
         <div className="container">
             <div className="footer">
-                <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}  className="block">
-                    <div className="kyrgyz">
-                        KYRGYZ <br/>TRAVEL
-                    </div>
-                    <p>one stop travel shop</p>
-                    <div>
-                        <TwitterOutlined />
-                        <FacebookOutlined style={{ height:60,width: 60}} />
+                <div className="block" >
+                    <div className=""style={{ marginTop:40}}>
                         <InstagramOutlined />
                     </div>
-                    <p>©Kyrgyz Concept 1990 — 2021 <br/>При воспроизведении материалов сайта<br/>
-                    обязательна установка активной гиперссылки на источник</p>
+                    <div style={{ marginTop:60,}}>
+                        <Rate />
+                    </div>
+                    <div style={{ marginTop:80,}} > 
+                        <GoogleOutlined />
+                    </div>
+                    
                 </div>
                 <div className="block">
                     <ul>
-                        {/* <li>Авиабилеты</li> */}
-                        <li><a href="http://localhost:3000/vip">ВИП-зал аэропорта</a></li>
-                        <li><a href="http://localhost:3000/three">Туры за рубеж из Бишкека.Горящие туры и лучшие предложения для вашего отдыха!</a></li>
-                        <li>Учеба за границей</li>
-                        <li>TravelSim</li>
-                        <li>Визы</li>
-                        <li>Страхование</li>
+                        <li className=""style={{ marginTop:40}}><a href="http://localhost:3000/vip">ВИП-зал аэропорта</a></li>
+                        <li style={{ marginTop:60,}}><a href="http://localhost:3000/three">Туры за рубеж из Бишкека.</a></li>
+                        <li style={{ marginTop:80,}}><a href="https://www.instagram.com/perspective_u.s.a/">Учеба за границей</a></li>
                     </ul>
                 </div>
                 <div className="block">
                     <ul>
-                        <li>Отели</li>
-                        <li>Туры по Кыргызстану и Центральной Азии</li>
-                        <li>Транспорт</li>
-                        <li>Организация конференций</li>
-                        <li>Академия</li>
+                        <li style={{ marginTop:40}}><a href="https://www.instagram.com/kettik.kg/?hl=ru">Туры по Кыргызстану</a></li>
+                        <li style={{ marginTop:60}}><a href="https://wiki-turizm.ru/kyrgyzstan/55-kyrgyzstan-transport">Транспорт</a></li>
+                        <li style={{ marginTop:80}}><a href="https://2gis.kg/bishkek/firm/70000001052986806">Академия</a></li>
                     </ul>
                 </div>
                 <div className="block">
                     <ul>
-                        <li>Оставить отзыв</li>
-                        <li>Контакты офисов</li>
-                        <li>Новости компании</li>
-                        <li>Вакансии</li>
+                        <li className=""style={{ marginTop:40}}><a href="https://www.linkedin.com/in/nuraiym-erkinova-19a1ab219/">Оставить отзыв</a></li>
+                        <li style={{ marginTop:60}}><a href="https://">Новости компании</a></li>
+                        <li  style={{ marginTop:80}}><a  href="https://t.me/devkg" style={{display: 'flex',alignItems: 'center'}}>Вакансии</a></li>
                     </ul>
                 </div>
             </div>
