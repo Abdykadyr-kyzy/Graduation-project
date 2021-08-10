@@ -1,9 +1,6 @@
 import React from 'react'
-import { Label } from "../../TextField"
 import './signUp.less'
 import { Button,Input } from "antd"
-import imgGoogle from './images/google.png'
-import imgFacebook from './images/facebook.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { add_user } from "../../../store/actions"
@@ -59,7 +56,7 @@ console.log(state)
 					<h1 className='sign__title'>Sign up</h1>
 
 					<div className='textfield'>
-						<Label htmlFor='Your Name'>Your Name</Label><br/>
+						<label htmlFor='Your Name'>Your Name</label><br/>
 						<Input style={{width:300}}
 							type='text'
 							placeholder='Your Name'
@@ -69,7 +66,7 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Email'>Email</Label><br/>
+						<label htmlFor='Email'>Email</label><br/>
 						<Input style={{width:300}}
 							type='email'
 							placeholder='Enter the Email'
@@ -79,7 +76,7 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Password'>Password</Label><br/>
+						<label htmlFor='Password'>Password</label><br/>
 						<Input 
 							style={{ marginBottom: 24 ,width:300}}
 							type='password'

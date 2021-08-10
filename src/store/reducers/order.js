@@ -6,6 +6,7 @@ const defaultState = {
   totalPrice: 0,
   totalCount: 0,
 };
+
 export const orderReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_ORDER:

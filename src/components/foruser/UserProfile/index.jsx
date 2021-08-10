@@ -1,17 +1,10 @@
 import React from 'react'
-import doc from './img/file_copy_24px.png'
-import sub from './img/Subscriptions.png'
 import './UserProfile.less'
-import set from "./img/setting.png"
-// import { SettingBody } from './SettingBody'
 import {useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import { delete_order } from "../../../store/actions"
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import Skeleton from '@material-ui/lab/Skeleton';
-import DeleteIcon from '@material-ui/icons/Delete';
 import Button from "@material-ui/core/Button"
+import PersonIcon from '@material-ui/icons/Person';
 
 export const UserProfile = () => {
 
@@ -32,11 +25,7 @@ export const UserProfile = () => {
 				<div className='navbar'>
 					{/* navbar */}
 					<div className='user'>
-						<img
-							style={{ width:30, height:30}}
-							src='https://www.pngkey.com/png/full/178-1787134_png-file-svg-github-icon-png.png'
-							alt=''
-						/>
+					    <PersonIcon/>
 						<p>
 							{currentUser.firstName}{" "}
 							{currentUser.lastName
@@ -46,12 +35,13 @@ export const UserProfile = () => {
 					</div>
 					<div>
 						<h1>your tours</h1>
-						<MenuList>
+						<div>
 							{
 								orders.length ? orders.map((el, id) => {
 									return <div key={id}>
 										<h2>{el.title}: {el.price}som</h2>
-										<img src={el.img} /><br></br>
+										<h1> all sum{el.price * el.count}</h1>
+										<h1>for {el.count} user</h1>
 										<Button onClick={() => dispatch(delete_order(el))}>
 											otmenit
 										</Button>
@@ -61,7 +51,7 @@ export const UserProfile = () => {
 										you not which yet
 									</div>
 							}
-						</MenuList>
+						</div>
 					</div>
 				</div>
 			</div>

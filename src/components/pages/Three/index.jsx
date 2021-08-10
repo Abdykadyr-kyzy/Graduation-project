@@ -1,28 +1,25 @@
-import React,{useState} from "react";
+import React from "react";
 import './Three.css';
-import {Carousel, Modal,Button} from "antd"
+import {Carousel,Button} from "antd"
 import { all,alls,aalls} from "../../../store/order"
-import { Tooltip } from "antd";
 import { add_order } from "../../../store/actions";
 import { useDispatch } from "react-redux";
 // for Alert
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from "@material-ui/lab/Alert"
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+import swal from "sweetalert"
 
 export const Three = () => {
 
     const dispatch = useDispatch()
 
-    const [open, setOpen] = React.useState(false);
-    const handleClick = () => {
-        setOpen(true);
-        setTimeout(() => {
-            setOpen(!true);   
-        }, 1000)
-    };
+    const mostrarAlerta = () =>{ 
+        swal({ 
+                  title: "succes!", 
+                  text: "You can see it on your profile!", 
+                  icon: "success", 
+                  button: "ok", 
+                });          
+    }
+       
 
    return (
         <div className="three">
@@ -52,7 +49,7 @@ export const Three = () => {
                 <div style={styles.menuContainer} >
                         {
                             all.map((el, id) => {
-                                return <Tooltip>
+                                return <div>
                                     <div
                                         style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
                                         key={id} >
@@ -63,9 +60,9 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
                                     </div>
-                                </Tooltip>
+                                </div>
                             })
                         }
                  </div>
@@ -77,10 +74,7 @@ export const Three = () => {
                  <div style={styles.menuContainer} >
                         {
                             alls.map((el, id) => {
-                                return <Tooltip>
-                                    <div
-                                        style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
-                                        key={id} >
+                                return <div className="rendering" >
                                         <div>
                                             <h1>{el.title}:  {el.price} </h1> 
                                         </div>
@@ -88,19 +82,15 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
-                                    </div>
-                                </Tooltip>
+                                       mostrarAlerta()}} type="primary" >buy</Button>
+                                  </div>
                             })
                         }
                  </div>
                  <div style={styles.menuContainer} >
                         {
                             aalls.map((el, id) => {
-                                return <Tooltip>
-                                    <div
-                                        style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
-                                        key={id} >
+                                return <div  className="rendering"  >
                                         <div>
                                             <h1>{el.title}:  {el.price} </h1> 
                                         </div>
@@ -108,18 +98,12 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
-                                    </div>
-                                </Tooltip>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
+                                </div>
                             })
                         }
                  </div>
            </div>   
-           <Snackbar open={open} autoHideDuration={6000}>
-                <Alert severity="success">
-                    Заказ успешно добавлен!
-                </Alert>
-            </Snackbar>
             <div className="card_three" >
                 <h1>Туры в Кыргызстан, Китай и страны Центральной Азии из Бишкека</h1>
                  <p>Компания Kyrgyz Travel в Кыргызстане предлагает соотечественникам и гостям из других стран эксклюзивные 

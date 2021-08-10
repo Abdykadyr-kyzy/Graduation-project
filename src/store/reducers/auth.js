@@ -1,5 +1,5 @@
 import  {RU,EN}  from "../actions"
-import {data} from "../data"
+import {data} from "../enru"
 
 const initialState = {
   data: data.ru,

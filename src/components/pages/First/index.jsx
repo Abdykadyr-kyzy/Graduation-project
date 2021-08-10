@@ -1,65 +1,43 @@
 import React from "react";
 import './First.css';
-import {Carousel, Modal} from "antd"
-import { useState } from 'react';
+import {Carousel} from "antd"
 import { useEffect } from 'react'
-import { data } from "../../../store/order"
-import {region} from "../../../store/order"
-import {regions} from "../../../store/order"
+import {regions,region,datas} from "../../../store/order"
 import { useSelector, useDispatch } from 'react-redux'
-import { add_order, delete_order } from "../../../store/actions"
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import Tooltip from '@material-ui/core/Tooltip';
+import { add_order} from "../../../store/actions"
 import Button from "@material-ui/core/Button"
-import {Link} from "react-router-dom"
 // alert
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from "@material-ui/lab/Alert"
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+import swal from "sweetalert"
+import { useState } from "react";
 
 export const First = () => {
 
+
+    const store = useSelector((state) => state.auth.data)
     const orders = useSelector(state => state.order.orders)
     const dispatch = useDispatch()
     useEffect(() => {
         localStorage.setItem('orders', JSON.stringify(orders))
     },[orders])
     // alert
-    const [open, setOpen] = React.useState(false);
-    const handleClick = () => {
-        setOpen(true);
-        setTimeout(() => {
-            setOpen(!true);   
-        }, 1000)
-    };
-
-    const [isModalVisible, setIsModalVisible] = useState(false);
-
-    const showModal = () => {
-      setIsModalVisible(true);
-    };
-  
-    const handleOk = () => {
-      setIsModalVisible(false);
-    };
-  
-    const handleCancel = () => {
-      setIsModalVisible(false);
-    };
-  
-
+    const mostrarAlerta = () =>{ 
+        swal({ 
+                  title: "succes!", 
+                  text: "You can see it on your profile!", 
+                  icon: "success", 
+                  button: "ok", 
+                });          
+    }
+       
     return(  
-        <div style={{height: 2000,backgroundColor:'cornsilk',width: 1450,display: 'flex',flexDirection: 'column',alignItems: 'center',justifyContent: 'space-between' }}>
+        <div className="first">
             <div className="title">
                 <Carousel autoplay>
                     <div className="title_zero">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1 className="title_title">Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
                     </div>
                     <div className="title_one">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1>Туры в Бишкек.Горящие туры и лучшие предложения для вашего отдыха!</h1>
                     </div>
                     <div className="title_two">
                         <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
@@ -71,16 +49,14 @@ export const First = () => {
             </div>
             <div className="cards">
                 <div className="word">
-                     <h1>Горящие туры </h1>
+                     <h1>{store.first} </h1>
                 </div>
                 <div>
-                    <MenuList style={styles.menuContainer} >
+                    <div style={{width:850,display:'flex',justifyContent:'space-around'}} >
                         {
-                            data.map((el, id) => {
-                                return <Tooltip>
-                                    <div
-                                        style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
-                                        key={id} >
+                            datas.map((el, id) => {
+                                return <div>
+                                    <div className="rendering" >
                                         <div>
                                             <h1>{el.title}:  {el.price} </h1> 
                                         </div>
@@ -88,25 +64,22 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
                                     </div>
-                                </Tooltip>
+                                </div>
                             })
                         }
-                    </MenuList>
+                    </div>
                 </div>
              </div>
             <div  className="cards_all" >
                 <div className="word">
                     <h1>Все туры</h1>
                   </div>
-                  <div style={styles.menuContainer} >
+                  <div style={{width:850,display:'flex',justifyContent:'space-around'}} >
                       {
                         region.map((el, id) => {
-                            return <Tooltip>
-                                <div
-                                    style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
-                                    key={id} >
+                            return <div className="rendering">
                                     <div>
                                         <h1>{el.title}:  {el.price} </h1> 
                                     </div>
@@ -114,19 +87,15 @@ export const First = () => {
                                         <img src={el.img} />
                                     </div>
                                       <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
-                                </div>
-                            </Tooltip>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
+                            </div>
                         })
                       }
                    </div>
-                    <div style={styles.menuContainer} >
+                    <div style={{width:850,display:'flex',justifyContent:'space-around'}} >
                         {
                             regions.map((el, id) => {
-                                return <Tooltip>
-                                    <div
-                                        style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
-                                        key={id} >
+                                return <div className="rendering" >
                                         <div>
                                             <h1>{el.title}:  {el.price} </h1> 
                                         </div>
@@ -134,18 +103,12 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
-                                    </div>
-                                </Tooltip>
+                                        mostrarAlerta()}} type="primary" >buy</Button>
+                                </div>
                             })
                         }
                     </div>
                 </div>
-            <Snackbar open={open} autoHideDuration={6000}>
-                <Alert severity="success">
-                    Заказ успешно добавлен!
-                </Alert>
-            </Snackbar>
             <div className="card">
                 <h1>Горящие туры в любую страну из Бишкека</h1>
                 <p>Туры за границу из Бишкека придутся по душе
@@ -160,12 +123,4 @@ export const First = () => {
             </div>
         </div>
     )
-}
-
-const styles = {
-    menuContainer: {
-        width: 850,
-        display:'flex',
-        justifyContent:'space-around'
-    },
 }

@@ -14,6 +14,12 @@
     width: 100%;
 }
 
+.rendering {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
 
 .one_three {
     height: 400px;

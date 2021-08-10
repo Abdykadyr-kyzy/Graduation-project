@@ -1,5 +1,7 @@
 import {FacebookOutlined,InstagramOutlined,TwitterOutlined} from "@ant-design/icons"
 import "./Footer.css"
+import { Rate } from 'antd';
+
 
 export const Footer = () => {
     return (
@@ -45,6 +47,7 @@ export const Footer = () => {
                         <li>Новости компании</li>
                         <li>Вакансии</li>
                     </ul>
+                    <Rate />
                 </div>
             </div>
         </div>

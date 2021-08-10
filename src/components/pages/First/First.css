@@ -1,3 +1,20 @@
+.first {
+    height: 2000px;
+    background-color:cornsilk;
+    width: 1450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rendering {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 .title {
     height: 400px;
     width: 1450px;
@@ -5,19 +22,26 @@
 .title_zero {
     height: 400px;
     width: 1450px;
-    background-image: url("https://biaprom.ru/wp-content/uploads/2014/10/DSC_0547-e1425446896890.jpg");
+    background-image: url("https://explore-share.imgix.net/wp-content/uploads/2017/10/IMG_2444.jpg");
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    text-align: start;
+    align-items: flex-end;
 }
+
+.title_title {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+}
+
+
 .title_one {
     height: 400px;
     width: 1450px;
-    background-image: url("https://www.open.kg/uploads/posts/2015-12/1449431555_7.jpg");
+    background-image: url("https://i9.photo.2gis.com/images/branch/112/15762598726956708_d4db.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +53,7 @@
 .title_two {
     height: 400px;
     width: 1450px;
-    background-image: url("https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRNn5ESYFfrt377NxNO7ez8A");
+    background-image: url("https://www.open.kg/uploads/posts/2018-03/1521816862_73b1122d480086fb975ddb837a1baaf3.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +65,7 @@
 .title_three {
     height: 400px;
     width: 1450px;
-    background-image: url("https://images.squarespace-cdn.com/content/v1/57483e0df699bbec3bf5f6ef/1577026582572-03JFAQO7XA6YZLZS9W01/Trekking-In-Ala-Archa-National-Park-Ak-Sai-Waterfall.jpg"); 
+    background-image: url("https://iloveasia.travel/images/post/post_main/977a7529af19400d35b57c439f077288.jpg"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,18 +92,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.foto_first {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    background-image: url("https://kashka-suu.kg/wp-content/uploads/2019/12/cropped-Image-1-at-frame-4.jpg");
-    background-size: cover;
-    text-align: start;
-    justify-content: flex-end;
-    color: white;
 }
 
 .fotos {

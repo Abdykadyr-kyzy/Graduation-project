@@ -1,4 +1,4 @@
-export const data = [
+export const datas = [
     {
         title:'kashka suu',
         img: "https://kashka-suu.kg/wp-content/uploads/2019/12/cropped-Image-1-at-frame-4.jpg",
