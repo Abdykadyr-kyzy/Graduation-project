@@ -12,6 +12,7 @@ import imgFacebook from './images/facebook-login.png'
 export const Login = () => {
 	const dispatch = useDispatch()
 	const succes = useSelector((state) => state.user.succes)
+	const store = useSelector((state) => state.auth.data)
 
 	const [inEmail, setInEmail] = useState('')
 	const [inPassword, setInPassword] = useState('')
@@ -25,10 +26,10 @@ export const Login = () => {
 		<div className='sign__main'>
 			<div className='sign__block container'>
 				<div className='sign__block1'>
-					<h1 className='sign__title'>Login</h1>
+					<h1 className='sign__title'>{store.login}</h1>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Email'>Email</Label><br/>
+						<Label htmlFor='Email'>{store.email}</Label><br/>
 						<Input style={{width:300}}
 							type='email'
 							placeholder='Enter the Email'
@@ -38,7 +39,7 @@ export const Login = () => {
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Password'>Password </Label><br/>
+						<Label htmlFor='Password'>{store.pass} </Label><br/>
 						<Input style={{width:300}}
 							type='password'
 							placeholder='Password'
@@ -53,14 +54,14 @@ export const Login = () => {
 							dispatch(login_user({ inEmail, inPassword }))
 						}}
 					>
-						Sign in
+						{store.sign}
 					</Button> <br/>
 
 					<b className='sign__end__text'>
-						Don't have an account?
+						{store.question}
 					</b>
 					<Link to="/sign">
-						<p>Sign up</p>
+						<p>{store.reg}</p>
 					</Link>
 				</div>
 				<div className='sign__block2'></div>

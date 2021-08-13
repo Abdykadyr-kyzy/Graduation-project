@@ -18,6 +18,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 
 export const Header = () => {
+    //translate 
+    const store = useSelector((state) => state.auth.data)
+
     const history = useHistory()
 	const currentUser = useSelector((state) => state.user.currentUser)
 	const dispatch = useDispatch()
@@ -48,14 +51,6 @@ export const Header = () => {
 
         setOpen(false);
     };
-
-    // function scrool () {
-    //     var top = $(document).scrollTop();
-    //     if(top < 650)  $(".header_content").className({top: '0px', position: 'relative'});
-    //     else $(".header_content").className({top:'0px',position: 'fixed'})
-    // }
-
-
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
         event.preventDefault();
@@ -78,7 +73,7 @@ export const Header = () => {
         <div className="content_header">
             <nav>
                 <ul>
-                    <Link to="./about" ><li>about</li></Link>
+                    <Link to="./about" ><li>Our team</li></Link>
                    
                     {/* <li><Link to="/" >{store.review}</Link></li> 
                     <li><Link to="/about" >{store.about}</Link></li>
@@ -120,10 +115,10 @@ export const Header = () => {
                     ) : (
                         <div>
                             <Link to="/login">
-                                <Button type='text'>Log in</Button>
+                                <Button type='text'>{store.log}</Button>
                             </Link>
                             <Link to='/sign'>
-                                <Button primary>Sign up</Button>
+                                <Button primary>{store.valid}</Button>
                             </Link>
                         </div>
                     )}
@@ -132,39 +127,39 @@ export const Header = () => {
                 <div>
                     <Link to='/first'>
                         <SubwayIcon/>
-                        <p>Туры po Bishkek</p>
+                        <p>{store.nav1}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to='/second'>
                         <SubwayIcon/>
-                        <p>Tранспорт</p>
+                        <p>{store.nav2}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to='/three'>
                         <SubwayIcon/>
-                        <p>Туры по regionam</p>
+                        <p>{store.nav3}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/">
                         <div className="kyrgyz">
-                            KYRGYZ<br/> TRAVEL
+                           KYRGYZ<br/> TRAVEL
                         </div>
-                        <p> One stop travel shop</p>
+                        <p> {store.nav4}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/fore">
                         <SubwayIcon/>
-                        <p>Организация конференций</p>
+                        <p>{store.nav5}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/five">
                         <SchoolIcon/>
-                        <p>Our school</p>
+                        <p>{store.nav6}</p>
                     </Link>
                 </div>
                 <div>
@@ -176,7 +171,7 @@ export const Header = () => {
                             aria-controls={open ? 'menu-list-grow' : undefined}
                             aria-haspopup="true"
                             onClick={handleToggle}
-                            >Другие услуги
+                            >{store.nav7}
                     </Button>
                     <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
                             {({ TransitionProps, placement }) => (
@@ -187,8 +182,8 @@ export const Header = () => {
                                 <Paper>
                                     <ClickAwayListener onClickAway={handleClose}>
                                     <div style={{width:100,height:55,marginBottom:-20}} autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                        <p><Link to="/vip">Vip</Link></p>
-                                        <p><Link to="/card" >Card</Link></p>
+                                        <p><Link to="/vip">{store.nav8}</Link></p>
+                                        <p><Link to="/card" >{store.nav9}</Link></p>
                                     </div>
                                     </ClickAwayListener>
                                 </Paper>

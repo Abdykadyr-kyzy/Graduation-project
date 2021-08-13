@@ -1,21 +1,21 @@
-export const data = [
+export const datas = [
     {
-        title:'kashka suu',
+        title:'Kashka -Suu',
         img: "https://kashka-suu.kg/wp-content/uploads/2019/12/cropped-Image-1-at-frame-4.jpg",
         price: 1000
     },
     { 
-        title: "ala archa",
+        title: "Ala-Archa",
         img: "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/3c/f7/80.jpg", 
         price: 1500
     },
     { 
-        title: "chunkurchak", 
+        title: "Chunkurchak", 
         img:"https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRtOEaEHp-k0jPeRu6aKunmA",
         price: 1500
     },
     { 
-        title: "fly jump", 
+        title: "Fly Jump", 
         img:"https://svetofor.info/images/newsfeed/19.04.2019/flejump.jpg",
         price: 3000
     },
@@ -33,7 +33,7 @@ export const region = [
         price: 100
     },
     {
-        title:'Ata beyit',
+        title:'Ata-Beyit',
         img: "http://1.bp.blogspot.com/-X1vprd-f-eA/VSJoIefNccI/AAAAAAAAA4M/xgE6vu8Jcz8/s1600/DSC_4568.JPG",
         price: 100
     },
@@ -46,7 +46,7 @@ export const region = [
 
 export const regions = [
     {
-        title:'filarmonia',
+        title:'Filarmonia',
         img: "https://koom.press/wp-content/uploads/2021/04/707571.323461abc113998bb8085e59b4ff8ab3.jpg",
         price: 100
     },
@@ -69,26 +69,26 @@ export const regions = [
 
 export const all = [
     {
-        title:'Kashka suu',
+        title:'Kashka-Suu',
         img:"https://centralasiagb.com/wp-content/uploads/2019/09/Kashka-Suu-ski-resort-24-sbkg0002.jpg",
     },
     {
-        title: "Apshir ata",
+        title: "Apshyr-Ata",
         img: "https://www.triptokyrgyzstan.com/sites/default/files/images/2019-03/12373264_1686498211565300_5837650685050943349_n.jpg",
     },
     {
-        title:'Sary chelek',
+        title:'Sary-Chelek',
         img:"https://i.pinimg.com/originals/8f/17/cf/8f17cfb221c44389292911f5b02731e9.jpg",
     },
     { 
-        title:'Son kol',
+        title:'Son-Kol',
         img:"https://www.baibol.kg/img/attraction_gallery/152413595171158.jpg",
     }
 ]
 
 export const alls = [
     {
-        title:"Issik kul",
+        title:"Issyk -Kol",
         img:"https://triptokyrgyzstan.com/sites/default/files/media/image/c_sergey_kalachov_9.jpg",                   
     },
     {
@@ -107,11 +107,11 @@ export const alls = [
 
 export const aalls = [
     {
-        title:'Chyckan say',
+        title:'Chychkan-Say',
         img:"https://triptokyrgyzstan.com/sites/default/files/media/image/gallery_126_3945_166624.jpg",
     },
     {
-        title:'Ala kol',
+        title:'Ala-Kol',
         img:"https://cacdn.araratour.com/file_manager/images/Kyrgyzstan/Sights/ala-kul-lakeo.jpg",
     },
     {
@@ -119,7 +119,7 @@ export const aalls = [
         img:"https://asiamountains.net/assets/cache_image/assets/lib/resized/370/1600x1063_0x0_d0b.jpg",
     },
     {
-        title:'Narin',
+        title:'Naryn',
         img:"https://upload.wikimedia.org/wikipedia/ky/b/b5/%D0%9C%D0%B0%D0%BD%D0%B0%D1%81_%D1%87%D0%BE%D0%BA%D1%83%D1%81%D1%83.jpg"
     }
 ]

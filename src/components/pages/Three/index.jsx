@@ -8,12 +8,14 @@ import { useDispatch } from "react-redux";
 // for Alert
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from "@material-ui/lab/Alert"
+import {useSelector} from 'react-redux'
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 export const Three = () => {
 
+    const store = useSelector((state) => state.auth.data)
     const dispatch = useDispatch()
 
     const [open, setOpen] = React.useState(false);
@@ -29,25 +31,25 @@ export const Three = () => {
             <div className="title_thre">
                  <Carousel autoplay>
                       <div className="one_three">
-                         <h1>Туры по regionam</h1>
+                         <h1>{store.nav3}</h1>
                       </div>
                       <div className="two_three">
-                         <h1>Туры по regionam</h1>
+                         <h1>{store.nav3}</h1>
                       </div>
                       <div className="thr_three">
-                         <h1>Туры по regionam</h1>
+                         <h1>{store.nav3}</h1>
                       </div>
                       <div className="four_three">
-                         <h1>Туры по regionam</h1>
+                         <h1>{store.nav3}</h1>
                       </div>
                       <div className="five_three">
-                         <h1>Туры по regionam</h1>
+                         <h1>{store.nav3}</h1>
                       </div>
                  </Carousel>
             </div>
             <div className="cards">
                 <div className="word">
-                    <h1>Горящие туры </h1>
+                    <h1>{store.three2} </h1>
                 </div>
                 <div style={styles.menuContainer} >
                         {
@@ -63,7 +65,7 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        handleClick()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </Tooltip>
                             })
@@ -72,7 +74,7 @@ export const Three = () => {
             </div>
             <div className="cards_all">
                  <div className="word">
-                    <h1>Все туры</h1>
+                    <h1>{store.three12}</h1>
                  </div>
                  <div style={styles.menuContainer} >
                         {
@@ -88,7 +90,7 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        handleClick()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </Tooltip>
                             })
@@ -108,26 +110,16 @@ export const Three = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        handleClick()}} type="primary" >buy</Button>
+                                        handleClick()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </Tooltip>
                             })
                         }
                  </div>
            </div>   
-           <Snackbar open={open} autoHideDuration={6000}>
-                <Alert severity="success">
-                    Заказ успешно добавлен!
-                </Alert>
-            </Snackbar>
             <div className="card_three" >
-                <h1>Туры в Кыргызстан, Китай и страны Центральной Азии из Бишкека</h1>
-                 <p>Компания Kyrgyz Travel в Кыргызстане предлагает соотечественникам и гостям из других стран эксклюзивные 
-                    туры по Азии.Средняя Азия – это особое состояние души. Это любовь с первого взгляда и на всю жизнь! 
-                    Красивая природа, сохранившая свой первозданный вид, древние города с богатой историей, таинственные  
-                    легенды, памятники архитектуры, шум и ароматы специй восточного базара, самобытная культура и неповторимое 
-                    гостеприимство и теплота души  местного населения… Все это и многое другое  не оставит вас равнодушными и вы 
-                    захотите возвращаться сюда снова и снова!</p>
+                <h1>{store.threeh1}</h1>
+                 <p>{store.threep}</p>
             </div>
         </div>
     )

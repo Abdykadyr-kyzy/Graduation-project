@@ -1,41 +1,33 @@
-import React from "react";
+import React,{ useState,useEffect } from "react";
 import './First.css';
-import {Carousel, Modal} from "antd"
-import { useState } from 'react';
-import { useEffect } from 'react'
-import { data } from "../../../store/order"
-import {region} from "../../../store/order"
-import {regions} from "../../../store/order"
+import {Carousel} from "antd"
+import {regions,region,datas} from "../../../store/order"
+import {data} from "../../../store/enru"
 import { useSelector, useDispatch } from 'react-redux'
-import { add_order, delete_order } from "../../../store/actions"
-import MenuItem from '@material-ui/core/MenuItem';
+import { add_order } from "../../../store/actions"
 import MenuList from '@material-ui/core/MenuList';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from "@material-ui/core/Button"
-import {Link} from "react-router-dom"
 
 //alert
 import swal from 'sweetalert';
-import MuiAlert from "@material-ui/lab/Alert"
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+ 
 
 export const First = () => {
 
+    //fot translate
+    const store = useSelector((state) => state.auth.data)
+    //for rendering
     const orders = useSelector(state => state.order.orders)
     const dispatch = useDispatch()
     useEffect(() => {
         localStorage.setItem('orders', JSON.stringify(orders))
     },[orders])
   
-    
-   
-   
     const mostrarAlerta = () =>{
 		swal({
             title: "succes!",
-            text: "We will connect!",
+            text: "You can see it on your profile!",
             icon: "success",
             button: "ok",
           });
@@ -48,27 +40,27 @@ export const First = () => {
             <div className="title">
                 <Carousel autoplay>
                     <div className="title_zero">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1>{store.car1}<br/> {store.car2} <br/>{store.car3}</h1>
                     </div>
                     <div className="title_one">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1>{store.car1}<br/> {store.car2} <br/>{store.car3}</h1>
                     </div>
                     <div className="title_two">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1>{store.car1}<br/> {store.car2} <br/>{store.car3}</h1>
                     </div>
                     <div className="title_three">
-                        <h1>Туры в Бишкек.<br/> Горящие туры и лучшие предложения <br/>для вашего отдыха!</h1>
+                        <h1>{store.car1}<br/> {store.car2} <br/>{store.car3}</h1>
                     </div>
                 </Carousel>
             </div>
             <div className="cards">
                 <div className="word">
-                     <h1>Горящие туры </h1>
+                     <h1>{store.tours}</h1>
                 </div>
                 <div>
                     <MenuList style={styles.menuContainer} >
                         {
-                            data.map((el, id) => {
+                            datas.map((el, id) => {
                                 return <Tooltip>
                                     <div
                                         style={{ display:'flex',flexDirection:'column',justifyContent:'space-between',cursor: 'pointer'}}
@@ -80,7 +72,7 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        mostrarAlerta()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </Tooltip>
                             })
@@ -106,7 +98,7 @@ export const First = () => {
                                         <img src={el.img} />
                                     </div>
                                       <Button onClick={() => {dispatch(add_order(el))
-                                        mostrarAlerta()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >{store.buy}</Button>
                                 </div>
                             </Tooltip>
                         })
@@ -126,7 +118,7 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                       mostrarAlerta()}} type="primary" >buy</Button>
+                                       mostrarAlerta()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </Tooltip>
                             })
@@ -134,16 +126,8 @@ export const First = () => {
                     </div>
                 </div>
             <div className="card">
-                <h1>Горящие туры в любую страну из Бишкека</h1>
-                <p>Туры за границу из Бишкека придутся по душе
-                     всем любителям ярких впечатлений. Романтические
-                      туры в Париж, Рим и Неаполь. Незабываемый отдых 
-                      в Таиланде, туры для парочек в райских уголках 
-                      нашей планеты — живописные Бали и Гоа.  
-                      Экскурсионные туры по магической Чехии, величественной Италии,
-                       утонченной Франции, колоритной Грузии… Горящие
-                        путевки в солнечную Анталию или роскошный Дубай. Любая из 
-                        предложенных нами стран уникальна, интересна и необыкновенно красива.</p>
+                <h1>{store.firsth1}</h1>
+                <p>{store.firstp}</p>
             </div>
         </div>
     )

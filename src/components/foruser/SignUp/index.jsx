@@ -11,7 +11,9 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
 
+
 export const SignUp = () => {
+
 	const [userEmail, setUserEmail] = useState('')
 	const [userPassword, setUserPassword] = useState('')
 	const [userName, setUserName] = useState('')
@@ -19,6 +21,7 @@ export const SignUp = () => {
 	const state = useSelector((state) => state.user)
 	const currentUser = useSelector((state) => state.user.currentUser)
 	const dispatch = useDispatch()
+	const store = useSelector((state) => state.auth.data)
 
 	const history = useHistory()
 console.log(state)
@@ -56,10 +59,10 @@ console.log(state)
 		<div className='sign__main'>
 			<div className='sign__block container'>
 				<div className='sign__block1'>
-					<h1 className='sign__title'>Sign up</h1>
+					<h1 className='sign__title'>{store.reg}</h1>
 
 					<div className='textfield'>
-						<Label htmlFor='Your Name'>Your Name</Label><br/>
+						<Label htmlFor='Your Name'>{store.name}</Label><br/>
 						<Input style={{width:300}}
 							type='text'
 							placeholder='Your Name'
@@ -69,7 +72,7 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Email'>Email</Label><br/>
+						<Label htmlFor='Email'>{store.email}</Label><br/>
 						<Input style={{width:300}}
 							type='email'
 							placeholder='Enter the Email'
@@ -79,7 +82,7 @@ console.log(state)
 					</div>
 					<br />
 					<div className='textfield'>
-						<Label htmlFor='Password'>Password</Label><br/>
+						<Label htmlFor='Password'>{store.pass}</Label><br/>
 						<Input 
 							style={{ marginBottom: 24 ,width:300}}
 							type='password'
@@ -95,12 +98,12 @@ console.log(state)
 							checkAccount()
 						}}
 					>
-						Create account
+						{store.account}
 					</Button> <br/>
 					<b className='sign__end__text1'>
-						Already have an account?{' '}
+						{store.qua}{' '}
 						<Link to="/login">
-							<a href='https:google.com'>Log in</a>
+							<a href='https:google.com'>{store.login}</a>
 						</Link>
 					</b>
 				</div>

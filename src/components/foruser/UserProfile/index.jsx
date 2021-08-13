@@ -15,6 +15,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Button from "@material-ui/core/Button"
 
 export const UserProfile = () => {
+	const store = useSelector((state) => state.auth.data)
 
 	const orders = useSelector(state => state.order.orders)
 
@@ -31,7 +32,6 @@ export const UserProfile = () => {
 		<div className='profile__background'>
 			<div className='container'>
 				<div className='navbar'>
-					{/* navbar */}
 					<div className='user'>
 						<img
 							style={{ width:30, height:30}}
@@ -46,24 +46,24 @@ export const UserProfile = () => {
 						</p>
 					</div>
 					<div>
-						<h1>your tours</h1>
+						<h1>{store.your}</h1>
 						<MenuList>
 							{
 								orders.length ? orders.map((el, id) => {
 									return <div key={id}>
-										<h2>{el.title}: {el.price}som</h2>
+										<h2>{el.title}: {el.price}{store.money}</h2>
 										<b>{el.count}</b>
-										<h1> count: {el.price} * {el.count} = {el.sum}</h1>
+										<h1> {store.count} {el.price} * {el.count} = {el.sum}</h1>
 										<div>
 										   <img src={el.img} /><br></br>
 										</div>
 										<Button onClick={() => dispatch(delete_order(el))}>
-											otmenit
+											{store.del}
 										</Button>
 									</div>
 								})
 									: <div>
-										you not which yet
+										{store.yet}
 									</div>
 							}
 						</MenuList>

@@ -3,12 +3,14 @@ import './Home.css';
 import {Link} from "react-router-dom"
 import {Carousel,Modal,Button } from "antd"
 import { useState } from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { add_order } from "../../store/actions";
-import { data,all } from "../../store/order";
+import { datas,all } from "../../store/order";
 import swal from 'sweetalert';
 
 export const Home = () => {
+    //fot translate
+    const store = useSelector((state) => state.auth.data)
 
     const dispatch = useDispatch()
     const mostrarAlerta = () =>{
@@ -25,28 +27,28 @@ export const Home = () => {
             <div className="big">
                 <Carousel autoplay>
                     <div className="bir">
-                       <h1 style={{color: 'orange'}} >Kyrgyzstan</h1>
+                       <h1 style={{color: 'orange'}} >{store.car}</h1>
                     </div>
                     <div className="eki">
-                       <h1 style={{color: 'orange'}}>Kyrgyzstan</h1>
+                       <h1 style={{color: 'orange'}}>{store.car}</h1>
                     </div>
                     <div className="uch">
-                      <h1 style={{color: 'orange'}}>Kyrgyzstan</h1>
+                      <h1 style={{color: 'orange'}}>{store.car}</h1>
                     </div>
                     <div className="four">
-                      <h1 style={{color: 'orange'}}>Kyrgyzstan</h1>
+                      <h1 style={{color: 'orange'}}>{store.car}</h1>
                     </div>
                 </Carousel>
             </div>
             <div className="home" >
                 <div className="home_cards">
                     <div className="home_word">
-                        <h1>Bishkek</h1>
+                        <h1>{store.bish}</h1>
                     </div>
                     <div>
                         <div style={styles.menuContainer} >
                             {
-                                data.map((el, id) => {
+                                datas.map((el, id) => {
                                     return <div>
                                         <div className="rendering"key={id} >
                                             <div>
@@ -56,18 +58,18 @@ export const Home = () => {
                                                 <img src={el.img} />
                                             </div>
                                             <Button onClick={() => {dispatch(add_order(el))
-                                           mostrarAlerta()}} type="primary" >buy</Button>
+                                           mostrarAlerta()}} type="primary" >{store.buy}</Button>
                                         </div>
                                     </div>
                                 })
                             }
                         </div>
                     </div>
-                    <Link to="/first"><Button>See all programs</Button></Link>
+                    <Link to="/first"><Button>{store.see}</Button></Link>
                 </div>
                 <div className="home_cards">
                     <div className="home_word">
-                        <h1>Regions</h1>
+                        <h1>{store.reg}</h1>
                     </div>
                     <div style={styles.menuContainer} >
                         {
@@ -77,13 +79,13 @@ export const Home = () => {
                                         <h1>{el.title}:  {el.price} </h1> 
                                         <img src={el.img} />
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        mostrarAlerta()}} type="primary" >buy</Button>
+                                        mostrarAlerta()}} type="primary" >{store.buy}</Button>
                                     </div>
                                 </div>
                             })
                         }
                     </div>
-                    <Link to="/three"><Button>See all programs</Button></Link>
+                    <Link to="/three"><Button>{store.see}</Button></Link>
                 </div>
             </div>
         </div>
