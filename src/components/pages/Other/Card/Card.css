@@ -5,8 +5,80 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_title {
+    width: 600px;
+    height: 100px;
+    opacity: 0.6;
+    background-color: rgb(14, 15, 15);
     color: white;
+}
+
+.card_card {
+    width:1450px;
+    height:1200px;
+    display:flex;
+    flex-direction:column;
+    background-color:cornsilk;
+    align-items:center;
+    justify-content:space-between;
+    text-align: center;
+}
+
+.card_card h2 {
+    width: 700px;
+}
+
+.estetic {
+    display:flex;
+    width:1000px;
+    justify-content:space-around;
+}
+
+.carta h2 {
+    width: 350px;
+}
+
+.carta {
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    width:1450px;
+}
+
+@media(max-width: 415px){
+    .title_card{
+        height: 100px;
+        width: 100%;
+    }
+    .card_title {
+        width: 100%;
+        height: 100px;
+        opacity: 0.6;
+        background-color: rgb(14, 15, 15);
+        color: white;
+    }
+    .card_card {
+        width: 100%;
+        height:100%;
+    }
+    .card_card h2 {
+        width: 300px;
+    }
+    .estetic {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:space-around;
+        align-items: center;
+    }
+    .carta {
+        display:flex;
+        justify-content:space-between;
+        width: 100%;
+        flex-direction: column;
+    }
 }

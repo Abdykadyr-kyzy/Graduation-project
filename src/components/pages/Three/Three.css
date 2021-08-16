@@ -1,6 +1,6 @@
 .three {
     width: 1450px;
-    height: 2200px;
+    height: 2600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,74 +14,76 @@
     width: 100%;
 }
 
+.three_render {
+    width: 850;
+    display: flex;
+    justify-content: space-around;
+}
 
 .one_three {
-    height: 400px;
-    width: 100%;
-    background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/14/aa/22/fe/museum-sulaiman-too.jpg");
+    height: 500px;
+    width: 1450px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.two_three {
-    height: 400px;
-    width: 100%;
-    background-image: url("https://www.centralasia-travel.com/uploads/gallery/1440/abshir-ata-07.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.thr_three {
-    height: 400px;
-    width: 100%;
-    background-image: url("https://strannik.kg/assets/cache_image/assets/lib/2020/03/20/sarychekek_01_1600x0_9ab.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.four_three {
-    height: 400px;
-    width: 100%;
-    background-image: url("https://asiamountains.net//assets/cache_image/assets/lib/resized/407/1280x648_0x0_d0b.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.five_three {
-    height: 400px;
-    width: 100%;
-    background-image: url("https://sputnik.kg/images/102414/12/1024141270.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
 .card_three {
-    height: 250px;
     width: 800px;
     text-align: start;
+}
+
+@media(max-width: 415px) {
+    .Three{
+        width: 100%;
+    }
+    .title_thre {
+        height: 100px;
+        width: 100%;
+    }
+    .one_three{
+        height: 100px;
+        width: 100%;
+    }
+    .two_three{
+        height: 100px;
+        width: 100%;
+    }
+    .thr_three{
+        height: 100px;
+        width: 100%;
+    }
+    .four_three{
+        height: 100px;
+        width: 100%;
+    }
+    .five_three{
+        height: 100px;
+        width: 100%;
+    }
+    .cards {
+        width: 100%;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards_all {
+        height: 2790px;
+        width: 100%;
+    }
+    .three_render {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .card_three {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+    .three {
+        width: 100%;
+        height: 4650px;
+    }
 }

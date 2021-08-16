@@ -9,8 +9,7 @@ export const Second = () => {
    return (
         <div className="container second">
             <div className="nav">
-                <h1>{store.theme}</h1>
-                <p>{store.theme1}</p>
+                <h1 className="title_title">{store.theme}.{store.theme1}</h1>
             </div> 
              <div className="avtos">
                  <div className="avto">

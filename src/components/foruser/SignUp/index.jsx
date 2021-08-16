@@ -24,7 +24,7 @@ export const SignUp = () => {
 	const store = useSelector((state) => state.auth.data)
 
 	const history = useHistory()
-console.log(state)
+    console.log(state)
 	useEffect(() => {
 		localStorage.setItem('users', JSON.stringify(state))
 	}, [currentUser])

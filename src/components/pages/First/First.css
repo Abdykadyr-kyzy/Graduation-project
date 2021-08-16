@@ -1,58 +1,60 @@
-
+.first_first {
+    height: 2000px;
+    background-color: cornsilk;
+    width: 1450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 .title {
     height: 400px;
     width: 1450px;
 }
 .title_zero {
+    display: flex; 
     height: 400px;
     width: 1450px;
-    background-image: url("https://biaprom.ru/wp-content/uploads/2014/10/DSC_0547-e1425446896890.jpg");
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    
-}
-.title_one {
-    height: 400px;
-    width: 1450px;
-    background-image: url("https://www.open.kg/uploads/posts/2015-12/1449431555_7.jpg");
+    background-image: url("https://explore-share.imgix.net/wp-content/uploads/2017/10/IMG_2444.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+}
+
+.title_title {
+    width: 400px;
+    height: 140px;
+    opacity: 0.8;
+    background-color: rgb(14, 15, 15);
+    color: white;
+}
+
+
+
+.title_one {
+    height: 400px;
+    width: 1450px;
+    background-image: url("https://i9.photo.2gis.com/images/branch/112/15762598726956708_d4db.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .title_two {
     height: 400px;
     width: 1450px;
-    background-image: url("https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRNn5ESYFfrt377NxNO7ez8A");
+    background-image: url("https://www.open.kg/uploads/posts/2018-03/1521816862_73b1122d480086fb975ddb837a1baaf3.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 .title_three {
     height: 400px;
     width: 1450px;
-    background-image: url("https://images.squarespace-cdn.com/content/v1/57483e0df699bbec3bf5f6ef/1577026582572-03JFAQO7XA6YZLZS9W01/Trekking-In-Ala-Archa-National-Park-Ak-Sai-Waterfall.jpg"); 
+    background-image: url("https://iloveasia.travel/images/post/post_main/977a7529af19400d35b57c439f077288.jpg"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
-
 
 .cards {
     height: 440px;
@@ -72,6 +74,12 @@
     align-items: center;
 }
 
+.first_render {
+    width: 850;
+    display: flex;
+    justify-content: space-around;
+}
+
 .foto_first {
     width: 300px;
     height: 200px;
@@ -79,9 +87,6 @@
     flex-direction: column;
     background-image: url("https://kashka-suu.kg/wp-content/uploads/2019/12/cropped-Image-1-at-frame-4.jpg");
     background-size: cover;
-    text-align: start;
-    justify-content: flex-end;
-    color: white;
 }
 
 .fotos {
@@ -100,8 +105,80 @@
 }
 
 .card {
-    height: 200px;
     width: 900px;
+}
+
+@media (max-width: 415px) {
+    .First {
+        width: 100%;
+    }
+    .title {
+        width: 100%;
+    }
+    .title_zero{
+        width: 100%;
+        height: 100px;
+    }
+    .title_one{
+        width: 100%;
+        height: 100px;
+    } 
+    .title_two{
+        width: 100%;
+        height: 100px;
+    }
+    .title_three{
+        width: 100%;
+        height: 100px;
+    }
+    .first_first {
+        height: 4550px;
+        background-color: cornsilk;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .first_render {
+        width: 850;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .title_title {
+        width: 230px;
+        height: 80px;
+        opacity: 0.8;
+        background-color: rgb(14, 15, 15);
+        color: white;
+        text-align: start;
+    }
+    .word {
+        background-color: rgb(134, 189, 214);
+        width: 100%;
+        display: flex;
+        text-align: start;
+    }
+    .cards {
+        height: 1400px;
+        width: 100%;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards_all {
+        height: 2790px;
+        width: 100%;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 300px;
+    }
 }
 
 

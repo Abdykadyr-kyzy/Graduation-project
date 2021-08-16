@@ -1,6 +1,8 @@
+import {data} from  "./enru"
+
 export const datas = [
     {
-        title:'Kashka -Suu',
+        title:data.nav1,
         img: "https://kashka-suu.kg/wp-content/uploads/2019/12/cropped-Image-1-at-frame-4.jpg",
         price: 1000
     },

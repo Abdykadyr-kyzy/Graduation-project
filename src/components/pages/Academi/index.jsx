@@ -25,7 +25,7 @@ export const Academi = () => {
                  <div className="cards_academi">
                      <div className="card_academi">
                          <p>{store.set}</p>
-                         <h2></h2>
+                         <h2>{store.feb}</h2>
                      </div>
                      <div className="car_academi">
                          <p>{store.tur2}</p>

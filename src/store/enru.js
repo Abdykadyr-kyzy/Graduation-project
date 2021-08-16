@@ -1,14 +1,18 @@
 export const data = {
     ru: {
+      alert1 : "Успешно",
+      alert2 : "Вы можете увидеть это в своем профиле!",
+      alert3 : "Xорошо",
+
      //header
       tours : 'Горящие туры',
       valid: "Регистрация",
       log: "Логин",
       nav1:'Туры пo Бишкек',
       nav2:'Tранспорт',
-      nav3:'Туры пo регионам',
-      nav4:"Единый туристический магазин",
-      nav5:'Организация конференций',
+      nav3:'Туры пo регионам.',
+      nav4:"Главная",
+      nav5:'О нас',
       nav6:'Наша школа',
       nav7:"Другие услуги",
       nav8:'Вип',
@@ -17,12 +21,10 @@ export const data = {
       car:"Кыргызстан",
       bish:"Бишкек",
       see:'Посмотреть все программы',
-      reg:"Регионы",
+      regions:"Регионы",
       
       //first
-      car1:"Туры в Бишкек.",
-      car2:"Горящие туры и лучшие предложения",
-      car3:"для вашего отдыха!",
+      car1:"Туры в Бишкек.Горящие туры и лучшие предложения для вашего отдыха!",
       firsth1:"Горящие туры в любую страну из Бишкека",
       firstp:"Туры за границу из Бишкека придутся по душвсем любителям ярких впечатлений. Романтические туры в Париж, Рим и Неаполь. Незабываемый отдых в Таиланде, туры для парочек в райских уголках нашей планеты — живописные Бали и Гоа.  Экскурсионные туры по магической Чехии, величественной Италии,утонченной Франции, колоритной Грузии… Горящие путевки в солнечную Анталию или роскошный Дубай. Любая из предложенных нами стран уникальна, интересна и необыкновенно красива.",
       buy:"Купить",
@@ -103,23 +105,20 @@ export const data = {
       yet:"you not which yet",
       your:"your tours",
       count:"count:"
-
-
-      
-
-
       },
     en: {
+      alert1 : "succes",
+      alert2 : "You can see it on your profile!",
+      alert3 : "ok",
       //nav
-     
       tours:'Hot tours',
       valid: "SignIn",
       log: "Login",
       nav1:'Tours around Bishkek',
       nav2:"Transport",
-      nav3:"Tours by region",
-      nav4:" One stop travel shop ",
-      nav5:"Organization of conferences",
+      nav3:"Tours by region.",
+      nav4:"Home",
+      nav5:"About",
       nav6:"Our school",
       nav7:"other services",
       nav8:"Vip",
@@ -128,11 +127,9 @@ export const data = {
       car:"Kyrgyzstan",
       bish:"Bishkek",
       see:'See all programs',
-      reg:"Regions",
+      regions:"Regions",
       //first
-      car1:"Tours to Bishkek.",
-      car2:"Last minute tours and best offers",
-      car3:"for your relaxation!",
+      car1:"Tours to Bishkek.Hot tours and the best offers for your vacation!",
       firsth1:"Last-minute tours to any country from Bishkek", 
       firstp:"Tours abroad from Bishkek will please to all lovers of vivid impressions. Romantic tours to Paris, Rome and Naples. An unforgettable vacation in Thailand, tours for couples in paradise of our planet - picturesque Bali and Goa. Excursion tours in magical Czech Republic, majestic Italy, sophisticated France, colorful Georgia ...trips to sunny Antalya or luxurious Dubai. Any of of the countries proposed by us is unique, interesting and unusually beautiful.",
       buy:"buy",
