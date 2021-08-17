@@ -30,7 +30,7 @@ function App() {
             <Route path='/first' component={First} />
             <Route path='/second' component={Second} />
             <Route path='/three' component={Three} />
-            <Route path='/about' component={About} />
+            <Route path='/fore' component={About} />
             <Route path='/five' component={Academi} />
             <Route path='/other' component={Other} />
             <Route path='/card' component={Card} />

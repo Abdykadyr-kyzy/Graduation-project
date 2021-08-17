@@ -35,7 +35,7 @@ export const Second = () => {
                      </div>
                  </div>
                  <div className="avto">
-                    <div>
+                    <div className="avt">
                         <div><SubwayIcon/></div>
                         <h3>{store.text9}</h3>
                         <p>{store.text10}</p>

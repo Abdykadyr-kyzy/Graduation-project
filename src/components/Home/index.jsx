@@ -33,7 +33,7 @@ export const Home = () => {
     return (
         <div className="home_home" >
             <div className="big">
-                <Carousel autoplay>
+                {/* <Carousel autoplay>
                     <div className="bir">
                        <h1 style={{color: 'orange'}} >{store.car}</h1>
                        <img src="https://www.nomadasaurus.com/wp-content/uploads/2019/06/Photos-of-Kyrgyzstan.jpg" />
@@ -50,7 +50,7 @@ export const Home = () => {
                       <h1 style={{color: 'orange'}}>{store.car}</h1>
                       <img src="https://weproject.media/upload/medialibrary/b52/b523f1468d8ca02d3b7246bfaaba1204.jpg" />
                     </div>
-                </Carousel>
+                </Carousel> */}
             </div>
             <div className="home" >
                 <div className="home_cards">

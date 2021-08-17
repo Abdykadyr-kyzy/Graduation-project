@@ -12,6 +12,7 @@ import {Link} from "react-router-dom";
 import PersonIcon from '@material-ui/icons/Person';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import Menu from '@material-ui/core/Menu';
+import {TeamOutlined } from '@ant-design/icons'
 
 const { Option } = Select
 export const Header = () => {
@@ -137,7 +138,7 @@ export const Header = () => {
                 </div>
                 <div>
                     <Link to="/fore">
-                        <SubwayIcon/>
+                        <TeamOutlined />
                         <p>{store.nav5}</p>
                     </Link>
                 </div>

@@ -67,7 +67,7 @@ export const First = () => {
                                            <img src={el.img} />
                                         </div>
                                         <Button onClick={() => {dispatch(add_order(el))
-                                        mostrarAlerta()}} type="primary" >{store.buy}</Button>
+                                        mostrarAlerta()}} type="primary" style={{ fontFamily:"Verdana, Geneva, Tahoma, sans-serif"}}>{store.buy}</Button>
                                     </div>
                                 </div>
                             })
