@@ -7,7 +7,7 @@
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #921e03;
 }
 
 .contain {
@@ -45,7 +45,7 @@ nav {
     text-align: center;
     justify-content: space-between;
     width: 1450px;
-    color: white;
+    color: #f9ece9;
     height: 40px;
     border-bottom: 1px solid;
 }
@@ -73,6 +73,19 @@ nav ul {
     }
     .burger {
         display: flex;
+    }
+    .burger_content {
+        width: 150px;
+        height: 240px;
+        margin-top: 30px;
+        margin-top: -11px;
+        margin-bottom: -11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        background-color: rgb(248, 240, 248);
+        font-style: italic;
     }
     .contain {
         display: none;

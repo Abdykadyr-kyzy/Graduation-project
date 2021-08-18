@@ -8,7 +8,7 @@
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #fdfdb5;
     
 }
 
@@ -17,10 +17,10 @@
    height: 1400px;
    display: flex;
    flex-direction: column;
-   background-color:cornsilk;
+   background-color:#fdfdb5;;
    background-repeat: no-repeat;
    background-size: cover;
-   background-image: url(https://oir.mobi/uploads/posts/2021-01/1611829134_14-p-biryuzovii-fon-odnotonnii-14.jpg);
+   /* background-image: url(https://oir.mobi/uploads/posts/2021-01/1611829134_14-p-biryuzovii-fon-odnotonnii-14.jpg); */
 
 }
 
@@ -52,24 +52,28 @@
         
     }
     .nav{
-        height: 100px;
+        height: 120px;
         width: 100%;
     }
 
     .avtos {
         width: 320px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        font-weight: bolder;
-       
-
+        font-style: oblique;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        font-style: oblique;
     }
     .avto div{
         display: flex;
         flex-direction: column;
         width: 320px;
-        height: 150px;
+        height: 190px;
         font-size: 11px;
         text-align: center;
         font-weight: bolder;

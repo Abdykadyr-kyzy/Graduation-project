@@ -85,7 +85,7 @@ export const Header = () => {
                                 {currentUser.lastName ? currentUser.lastName[0] : ''}
                             </div>
                             <Link to="/user">
-                                <PersonIcon/>
+                                <PersonIcon style={{color: "#f5f5dc"}}/>
                             </Link>
                             <div>
                                 <Button danger
@@ -101,10 +101,10 @@ export const Header = () => {
                     ) : (
                         <div>
                             <Link to="/login">
-                                <Button type='text'>{store.log}</Button>
+                                <Button style={{color: '#f8ede4',fontFamily:"sans-serif"}} type='text'>{store.log}</Button>
                             </Link>
                             <Link to='/sign'>
-                                <Button primary>{store.valid}</Button>
+                                <Button style={{color: '#f8ede4',fontFamily:"sans-serif"}} primary>{store.valid}</Button>
                             </Link>
                         </div>
                     )}
@@ -112,20 +112,20 @@ export const Header = () => {
             <div className="contain" >
                 <div>
                     <Link to='/first'>
-                        <SubwayIcon/>
-                        <p>{store.nav1}</p>
+                        <SubwayIcon style={{color: "#f5f5dc"}}/>
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav1}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to='/second'>
-                        <SubwayIcon/>
-                        <p>{store.nav2}</p>
+                        <SubwayIcon style={{color: "#f5f5dc"}}/>
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav2}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to='/three'>
-                        <SubwayIcon/>
-                        <p>{store.nav3}</p>
+                        <SubwayIcon style={{color: "#f5f5dc"}}/>
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav3}</p>
                     </Link>
                 </div>
                 <div>
@@ -133,25 +133,25 @@ export const Header = () => {
                         <div className="kyrgyz">
                            KYRGYZ<br/> TRAVEL
                         </div>
-                        <p>{store.nav4}</p>
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav4}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/fore">
-                        <TeamOutlined />
-                        <p>{store.nav5}</p>
+                        <TeamOutlined style={{color: "#f5f5dc"}} />
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav5}</p>
                     </Link>
                 </div>
                 <div>
                     <Link to="/five">
-                        <SchoolIcon/>
-                        <p>{store.nav6}</p>
+                        <SchoolIcon style={{color: "#f5f5dc"}}/>
+                        <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav6}</p>
                     </Link>
                 </div>
                 <div>
                     <Link  to="/card">
-                        <SubwayIcon/>
-                       <p>{store.nav9}</p>
+                        <SubwayIcon style={{color: "#f5f5dc"}}/>
+                       <p style={{color: '#f8ede4',fontFamily:"sans-serif"}}>{store.nav9}</p>
                     </Link>
                 </div>
             </div>

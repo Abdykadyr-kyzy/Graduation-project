@@ -13,7 +13,7 @@ export const About = () => {
                 <p>Frontend developer</p>
             </div>
             <div className="cardAbout">
-                <h2 style={{ marginTop: 60, textAlign:'center',color:"red"}}>Our skills</h2>
+                <h2 style={{ marginTop: 40, textAlign:'center',color:"red"}}>Our skills</h2>
                 <ul>
                     <li>Html</li>
                     <li>Css</li>

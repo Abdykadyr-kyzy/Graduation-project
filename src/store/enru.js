@@ -61,7 +61,7 @@ export const data = {
        text16:"Чтобы вы смогли как можно быстрее возобновить работу компании в новом офисе, мы соберем и расставим мебель, разложим вещи сотрудников по местам, повесим жалюзи, вывезем образовавшийся мусор (использованный упаковочный материал).",
        //footer
        li1:"ВИП-зал аэропорта",
-       li2:"Туры за рубеж из Бишкека.",
+       li2:"Туры за рубеж .",
        li3:"Учеба за границей",
        li4:"Туры по Кыргызстану",
        li5:"Транспорт",
@@ -165,7 +165,7 @@ export const data = {
       text15: 'Set-up services for new offices in Bishkek, Kyrgyzstan',
       text16: "So that you can resume the work of the company in the new office as soon as possible, we will collect and arrange furniture, put employees' belongings in their places, hang blinds, take out the resulting garbage (used packaging material).",
       li1: "VIP lounge of the airport",
-      li2: "Tours abroad from Bishkek.",
+      li2: "Tours abroad .",
       li3: "Study abroad",
       li4: "Tours in Kyrgyzstan",
       li5: "Transport",
